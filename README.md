@@ -2,7 +2,7 @@
 
 # Name(Pluem):  No. :
 # Name(Pe):APICHART NUTCHANAT No.610610707 :
-# Name(Toey):  No. :Atiwit Jaikaroon No.610612060
+# Name(Toey):Atiwit Jaikaroon No.610612060
 # Name(Ake):  No. :
 # Name(Phark):  No. :
 # Feature : 
