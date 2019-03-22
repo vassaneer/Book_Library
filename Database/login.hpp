@@ -10,8 +10,8 @@ class Login{
 };
 
 bool Login::login(){
-	ifstream ID("ID.txt");
-    ifstream Pass("Pass.txt");
+	ifstream ID("Text/ID.txt");
+    ifstream Pass("Text/Pass.txt");
     string line_id,line_pass;
     string input_id,input_pass;
     bool check=false;
