@@ -23,6 +23,8 @@ bool Login::login(string input_id,string input_pass){
         }
 }while(check==false &&num_check<=2);
 	return check;
+    ID.close();
+    Pass.close();
 };
 
 
