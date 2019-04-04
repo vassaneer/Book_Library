@@ -20,6 +20,7 @@ int DatabaseApi::check_login(string name_input, string pass_input) {
 		int loc3 = textline.find(':', loc2 + 1);
 		this->name = textline.substr(loc1+ 1, loc2 - loc1- 1);
 		this->pass = textline.substr(loc2 + 1, loc3 - loc2 - 1);
+		// this->book_seat_yet=textline.substr();
 		cout << textline << endl;
 		if (this->name == name_input) {
 			if (this->pass == pass_input) return 1;
@@ -44,7 +45,6 @@ DatabaseApi::~DatabaseApi() {
 
 }
 DatabaseApi::DatabaseApi() {
-
 }
 
 void DatabaseApi::AddData(int id, string name, string pass) {
@@ -60,4 +60,8 @@ string DatabaseApi::currentDateTime() {
 	tstruct = *localtime(&now);
 	strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
 	return buf;
+}
+
+bool DatabaseApi::set_book_yet(){
+
 }
