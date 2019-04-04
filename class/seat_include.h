@@ -12,7 +12,7 @@ class SeatApi{
     private:
         string hor[6]; //Arrays name of hor
         int seat[6][6][6]; //Check seat in each hor 
-        int sum_seat[6];
+        int sum_seat[6]={0,0,0,0,0,0};
         //bool update =false;  
         //bool hor_isfull[6]; //Arrays of 
     public:
@@ -21,5 +21,6 @@ class SeatApi{
         void book_seat(int ,int ,int ); // book seat in hor
         //void check_horfull();
         void update();
+        void setzero();
 };
 #endif
