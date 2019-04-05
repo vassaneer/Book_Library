@@ -48,14 +48,19 @@ SeatApi::SeatApi(){
 };
 
 void SeatApi::arrange_seat_hor(int index_start,int index_end){
+    int get_empty=0;
     for(int i=0;i<6;i++){
         for(int j=0;j<6;j++){
             for(int k=0;k<6;k++){
                 for(int f=index_start;f<index_start+(index_end-index_start);f++){
                     sum_seat[i]+=seat[i][j][k][f];
+                    get_empty+=seat[i][j][k][f];
                 }
-                // cout<<sum_seat[i]<<endl;
+                cout<<get_empty;
+                if(get_empty==0) empty_seat[i]++;
+                get_empty=0;
             }
+            cout<<endl;
         }
     }
     bool flag=false;
@@ -66,6 +71,7 @@ void SeatApi::arrange_seat_hor(int index_start,int index_end){
                 swap(this->sum_seat[j],this->sum_seat[j+1]);
                 swap(this->hor[j],this->hor[j+1]);
                 swap(this->seat[j],this->seat[j+1]);
+                swap(empty_seat[j],empty_seat[j+1]);
                 flag=true;
                 }
         if(!flag) break;
