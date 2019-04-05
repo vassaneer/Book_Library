@@ -11,7 +11,7 @@
 using namespace std;
 
 SeatApi::SeatApi(){
-    ifstream seat_txt("seat2.txt");
+    ifstream seat_txt("seat.txt");
     string textline;
     int text_index=0;
     int i=0;
@@ -21,7 +21,7 @@ SeatApi::SeatApi(){
     int sum=0;
     while(getline(seat_txt,textline)){
         int loc1= textline.find_first_of(':');
-        this->hor[i]=textline.substr(0,loc1);
+        this->hor.push_back(textline.substr(0,loc1));
         text_index=loc1+1;
         while (j<=5){
             while(textline[text_index]!='%'){
@@ -70,8 +70,8 @@ void SeatApi::arrange_seat_hor(int index_start,int index_end){
                 }
         if(!flag) break;
     }
-    for(int k=0;k<6;k++) cout<<this->sum_seat[k]<<" "<<this->hor[k]<<endl;
-    for(int i=0;i<6;i++) for(int j=0;j<6;j++) for(int k=0;k<6;k++) cout<<this->seat[i][j][k]<<" "<<i<<" "<<j<<" "<<k<<endl;
+    // for(int k=0;k<6;k++) cout<<this->sum_seat[k]<<" "<<this->hor[k]<<endl;
+    // for(int i=0;i<6;i++) for(int j=0;j<6;j++) for(int k=0;k<6;k++) cout<<this->seat[i][j][k]<<" "<<i<<" "<<j<<" "<<k<<endl;
 };
 
 void SeatApi::book_seat(int i, int j,int k,int start,int end){
@@ -81,7 +81,7 @@ void SeatApi::book_seat(int i, int j,int k,int start,int end){
 };
 
 void SeatApi::update(){
-   ofstream seat_update("seat2.txt");
+   ofstream seat_update("seat.txt");
     for(int i=0;i<6;i++){
         seat_update<<hor[i]<<":";
         for(int j=0;j<6;j++){
@@ -110,3 +110,7 @@ void SeatApi::setzero(){
         }
     }
 };
+
+vector <string> SeatApi::get_hor(){
+    return this->hor;
+}
