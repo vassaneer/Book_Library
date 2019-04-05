@@ -102,7 +102,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ASUS\Desktop</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ASUS\Desktop\Project\class</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -134,14 +134,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\ASUS\Desktop\data_include.cpp" />
+    <ClCompile Include="..\class\data_include.cpp" />
+    <ClCompile Include="..\class\seat_include.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Register_ID.cpp" />
     <ClCompile Include="Ruleofuse.cpp" />
     <ClCompile Include="Server_select.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\ASUS\Desktop\data_include.h" />
+    <ClInclude Include="..\class\data_include.h" />
+    <ClInclude Include="..\class\seat_include.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -171,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Data.txt" />
+    <Text Include="seat.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

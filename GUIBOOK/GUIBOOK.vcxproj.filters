@@ -27,7 +27,10 @@
     <ClCompile Include="Ruleofuse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\ASUS\Desktop\data_include.cpp">
+    <ClCompile Include="..\class\data_include.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\class\seat_include.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,7 +47,10 @@
     <ClInclude Include="Ruleofuse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\ASUS\Desktop\data_include.h">
+    <ClInclude Include="..\class\data_include.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\class\seat_include.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -64,5 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Data.txt" />
+    <Text Include="seat.txt" />
   </ItemGroup>
 </Project>
