@@ -10,7 +10,7 @@
 #include <algorithm>
 using namespace std;
 
-SeatApi::SeatApi(){
+SeatApi::SeatApi(int start, int end){
     ifstream seat_txt("seat.txt");
     string textline;
     int text_index=0;
@@ -21,7 +21,7 @@ SeatApi::SeatApi(){
     int sum=0;
     while(getline(seat_txt,textline)){
         int loc1= textline.find_first_of(':');
-        this->hor.push_back(textline.substr(0,loc1));
+        this->hor[i]=textline.substr(0,loc1);
         text_index=loc1+1;
         while (j<=5){
             while(textline[text_index]!='%'){
@@ -45,6 +45,8 @@ SeatApi::SeatApi(){
         i++;
     }
     seat_txt.close();
+	arrange_seat_hor(start, end);
+
 };
 
 void SeatApi::arrange_seat_hor(int index_start,int index_end){
@@ -56,11 +58,9 @@ void SeatApi::arrange_seat_hor(int index_start,int index_end){
                     sum_seat[i]+=seat[i][j][k][f];
                     get_empty+=seat[i][j][k][f];
                 }
-                cout<<get_empty;
-                if(get_empty==0) empty_seat[i]++;
+                if(get_empty==0) this->empty_seat[i]++;
                 get_empty=0;
             }
-            cout<<endl;
         }
     }
     bool flag=false;
@@ -117,6 +117,6 @@ void SeatApi::setzero(){
     }
 };
 
-vector <string> SeatApi::get_hor(){
-    return this->hor;
+string *SeatApi::get_hor() {
+	return this->hor;
 }

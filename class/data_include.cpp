@@ -61,7 +61,3 @@ string DatabaseApi::currentDateTime() {
 	strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
 	return buf;
 }
-
-bool DatabaseApi::set_book_yet(){
-
-}
