@@ -3,6 +3,8 @@
 #include <string>
 #include<iostream>
 #include <vector>
+#include "Table.h"
+
 
 namespace GUIBOOK {
 	using namespace std;
@@ -17,7 +19,8 @@ namespace GUIBOOK {
 	/// Summary for Server_select
 	/// </summary>
 	public ref class Server_select : public System::Windows::Forms::Form
-	{ 
+	{
+
 	public:
 		Server_select(void)
 		{
@@ -41,7 +44,8 @@ namespace GUIBOOK {
 
 
 
-
+	private: cli::array<System::Windows::Forms::Label^>  ^LabelArr;
+	private: cli::array<System::Windows::Forms::Panel^>  ^PanelArr;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::Label^  hor1;
@@ -62,7 +66,12 @@ namespace GUIBOOK {
 	private: System::Windows::Forms::Label^  N5;
 	private: System::Windows::Forms::Label^  hor6;
 	private: System::Windows::Forms::Label^  hor5;
-
+	private: System::Windows::Forms::Panel^  Hor1P;
+	private: System::Windows::Forms::Panel^  Hor2P;
+	private: System::Windows::Forms::Panel^  Hor3P;
+	private: System::Windows::Forms::Panel^  Hor4P;
+	private: System::Windows::Forms::Panel^  Hor5P;
+	private: System::Windows::Forms::Panel^  Hor6P;
 	protected:
 
 	protected:
@@ -101,7 +110,19 @@ namespace GUIBOOK {
 			this->N5 = (gcnew System::Windows::Forms::Label());
 			this->hor6 = (gcnew System::Windows::Forms::Label());
 			this->hor5 = (gcnew System::Windows::Forms::Label());
+			this->Hor1P = (gcnew System::Windows::Forms::Panel());
+			this->Hor2P = (gcnew System::Windows::Forms::Panel());
+			this->Hor3P = (gcnew System::Windows::Forms::Panel());
+			this->Hor4P = (gcnew System::Windows::Forms::Panel());
+			this->Hor5P = (gcnew System::Windows::Forms::Panel());
+			this->Hor6P = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->Hor1P->SuspendLayout();
+			this->Hor2P->SuspendLayout();
+			this->Hor3P->SuspendLayout();
+			this->Hor4P->SuspendLayout();
+			this->Hor5P->SuspendLayout();
+			this->Hor6P->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label4
@@ -126,13 +147,15 @@ namespace GUIBOOK {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
 			this->pictureBox1->TabIndex = 17;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &Server_select::pictureBox1_Click);
 			// 
 			// hor1
 			// 
 			this->hor1->AutoSize = true;
 			this->hor1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->hor1->Location = System::Drawing::Point(189, 272);
+			this->hor1->ForeColor = System::Drawing::Color::White;
+			this->hor1->Location = System::Drawing::Point(22, 8);
 			this->hor1->Name = L"hor1";
 			this->hor1->Size = System::Drawing::Size(99, 32);
 			this->hor1->TabIndex = 18;
@@ -144,7 +167,8 @@ namespace GUIBOOK {
 			this->hor2->AutoSize = true;
 			this->hor2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->hor2->Location = System::Drawing::Point(189, 340);
+			this->hor2->ForeColor = System::Drawing::Color::White;
+			this->hor2->Location = System::Drawing::Point(22, 6);
 			this->hor2->Name = L"hor2";
 			this->hor2->Size = System::Drawing::Size(99, 32);
 			this->hor2->TabIndex = 19;
@@ -156,7 +180,7 @@ namespace GUIBOOK {
 			this->hor4->AutoSize = true;
 			this->hor4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->hor4->Location = System::Drawing::Point(189, 472);
+			this->hor4->Location = System::Drawing::Point(16, 10);
 			this->hor4->Name = L"hor4";
 			this->hor4->Size = System::Drawing::Size(99, 32);
 			this->hor4->TabIndex = 21;
@@ -168,7 +192,7 @@ namespace GUIBOOK {
 			this->hor3->AutoSize = true;
 			this->hor3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->hor3->Location = System::Drawing::Point(189, 404);
+			this->hor3->Location = System::Drawing::Point(20, 5);
 			this->hor3->Name = L"hor3";
 			this->hor3->Size = System::Drawing::Size(99, 32);
 			this->hor3->TabIndex = 20;
@@ -180,7 +204,7 @@ namespace GUIBOOK {
 			this->N4->AutoSize = true;
 			this->N4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->N4->Location = System::Drawing::Point(542, 472);
+			this->N4->Location = System::Drawing::Point(369, 10);
 			this->N4->Name = L"N4";
 			this->N4->Size = System::Drawing::Size(99, 32);
 			this->N4->TabIndex = 25;
@@ -192,7 +216,7 @@ namespace GUIBOOK {
 			this->N3->AutoSize = true;
 			this->N3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->N3->Location = System::Drawing::Point(542, 404);
+			this->N3->Location = System::Drawing::Point(373, 5);
 			this->N3->Name = L"N3";
 			this->N3->Size = System::Drawing::Size(99, 32);
 			this->N3->TabIndex = 24;
@@ -204,7 +228,7 @@ namespace GUIBOOK {
 			this->N2->AutoSize = true;
 			this->N2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->N2->Location = System::Drawing::Point(542, 340);
+			this->N2->Location = System::Drawing::Point(375, 6);
 			this->N2->Name = L"N2";
 			this->N2->Size = System::Drawing::Size(99, 32);
 			this->N2->TabIndex = 23;
@@ -216,7 +240,8 @@ namespace GUIBOOK {
 			this->N1->AutoSize = true;
 			this->N1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->N1->Location = System::Drawing::Point(542, 272);
+			this->N1->ForeColor = System::Drawing::Color::White;
+			this->N1->Location = System::Drawing::Point(375, 8);
 			this->N1->Name = L"N1";
 			this->N1->Size = System::Drawing::Size(99, 32);
 			this->N1->TabIndex = 22;
@@ -289,7 +314,7 @@ namespace GUIBOOK {
 			this->N6->AutoSize = true;
 			this->N6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->N6->Location = System::Drawing::Point(542, 614);
+			this->N6->Location = System::Drawing::Point(365, 13);
 			this->N6->Name = L"N6";
 			this->N6->Size = System::Drawing::Size(99, 32);
 			this->N6->TabIndex = 35;
@@ -301,7 +326,7 @@ namespace GUIBOOK {
 			this->N5->AutoSize = true;
 			this->N5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->N5->Location = System::Drawing::Point(542, 546);
+			this->N5->Location = System::Drawing::Point(365, 11);
 			this->N5->Name = L"N5";
 			this->N5->Size = System::Drawing::Size(99, 32);
 			this->N5->TabIndex = 34;
@@ -313,7 +338,7 @@ namespace GUIBOOK {
 			this->hor6->AutoSize = true;
 			this->hor6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->hor6->Location = System::Drawing::Point(189, 614);
+			this->hor6->Location = System::Drawing::Point(12, 13);
 			this->hor6->Name = L"hor6";
 			this->hor6->Size = System::Drawing::Size(99, 32);
 			this->hor6->TabIndex = 33;
@@ -325,39 +350,105 @@ namespace GUIBOOK {
 			this->hor5->AutoSize = true;
 			this->hor5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->hor5->Location = System::Drawing::Point(189, 546);
+			this->hor5->Location = System::Drawing::Point(12, 11);
 			this->hor5->Name = L"hor5";
 			this->hor5->Size = System::Drawing::Size(99, 32);
 			this->hor5->TabIndex = 32;
 			this->hor5->Text = L"label5";
 			this->hor5->Visible = false;
 			// 
+			// Hor1P
+			// 
+			this->Hor1P->Controls->Add(this->N1);
+			this->Hor1P->Controls->Add(this->hor1);
+			this->Hor1P->Location = System::Drawing::Point(167, 264);
+			this->Hor1P->Name = L"Hor1P";
+			this->Hor1P->Size = System::Drawing::Size(487, 49);
+			this->Hor1P->TabIndex = 36;
+			this->Hor1P->Visible = false;
+			this->Hor1P->Click += gcnew System::EventHandler(this, &Server_select::Hor1P_Click);
+			// 
+			// Hor2P
+			// 
+			this->Hor2P->Controls->Add(this->N2);
+			this->Hor2P->Controls->Add(this->hor2);
+			this->Hor2P->ForeColor = System::Drawing::Color::White;
+			this->Hor2P->Location = System::Drawing::Point(167, 334);
+			this->Hor2P->Name = L"Hor2P";
+			this->Hor2P->Size = System::Drawing::Size(486, 47);
+			this->Hor2P->TabIndex = 37;
+			this->Hor2P->Visible = false;
+			this->Hor2P->Click += gcnew System::EventHandler(this, &Server_select::Hor2P_Click);
+			// 
+			// Hor3P
+			// 
+			this->Hor3P->Controls->Add(this->N3);
+			this->Hor3P->Controls->Add(this->hor3);
+			this->Hor3P->ForeColor = System::Drawing::Color::White;
+			this->Hor3P->Location = System::Drawing::Point(169, 399);
+			this->Hor3P->Name = L"Hor3P";
+			this->Hor3P->Size = System::Drawing::Size(483, 46);
+			this->Hor3P->TabIndex = 38;
+			this->Hor3P->Visible = false;
+			this->Hor3P->Click += gcnew System::EventHandler(this, &Server_select::Hor3P_Click);
+			// 
+			// Hor4P
+			// 
+			this->Hor4P->Controls->Add(this->N4);
+			this->Hor4P->Controls->Add(this->hor4);
+			this->Hor4P->ForeColor = System::Drawing::Color::White;
+			this->Hor4P->Location = System::Drawing::Point(173, 462);
+			this->Hor4P->Name = L"Hor4P";
+			this->Hor4P->Size = System::Drawing::Size(478, 52);
+			this->Hor4P->TabIndex = 39;
+			this->Hor4P->Visible = false;
+			this->Hor4P->Click += gcnew System::EventHandler(this, &Server_select::Hor4P_Click);
+			// 
+			// Hor5P
+			// 
+			this->Hor5P->Controls->Add(this->N5);
+			this->Hor5P->Controls->Add(this->hor5);
+			this->Hor5P->ForeColor = System::Drawing::Color::White;
+			this->Hor5P->Location = System::Drawing::Point(177, 535);
+			this->Hor5P->Name = L"Hor5P";
+			this->Hor5P->Size = System::Drawing::Size(473, 52);
+			this->Hor5P->TabIndex = 40;
+			this->Hor5P->Visible = false;
+			this->Hor5P->Click += gcnew System::EventHandler(this, &Server_select::Hor5P_Click);
+			// 
+			// Hor6P
+			// 
+			this->Hor6P->Controls->Add(this->N6);
+			this->Hor6P->Controls->Add(this->hor6);
+			this->Hor6P->ForeColor = System::Drawing::Color::White;
+			this->Hor6P->Location = System::Drawing::Point(177, 601);
+			this->Hor6P->Name = L"Hor6P";
+			this->Hor6P->Size = System::Drawing::Size(472, 57);
+			this->Hor6P->TabIndex = 41;
+			this->Hor6P->Visible = false;
+			this->Hor6P->Click += gcnew System::EventHandler(this, &Server_select::Hor6P_Click);
+			// 
 			// Server_select
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(820, 754);
-			this->Controls->Add(this->N6);
-			this->Controls->Add(this->N5);
-			this->Controls->Add(this->hor6);
-			this->Controls->Add(this->hor5);
+			this->ClientSize = System::Drawing::Size(838, 801);
+			this->Controls->Add(this->Hor6P);
+			this->Controls->Add(this->Hor5P);
+			this->Controls->Add(this->Hor4P);
+			this->Controls->Add(this->Hor3P);
+			this->Controls->Add(this->Hor2P);
+			this->Controls->Add(this->Hor1P);
 			this->Controls->Add(this->Confirmtime);
 			this->Controls->Add(this->End);
 			this->Controls->Add(this->Start);
 			this->Controls->Add(this->Choosetime);
 			this->Controls->Add(this->End_T);
 			this->Controls->Add(this->Start_T);
-			this->Controls->Add(this->N4);
-			this->Controls->Add(this->N3);
-			this->Controls->Add(this->N2);
-			this->Controls->Add(this->N1);
-			this->Controls->Add(this->hor4);
-			this->Controls->Add(this->hor3);
-			this->Controls->Add(this->hor2);
-			this->Controls->Add(this->hor1);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label4);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(838, 801);
@@ -366,46 +457,125 @@ namespace GUIBOOK {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Server_select";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->Hor1P->ResumeLayout(false);
+			this->Hor1P->PerformLayout();
+			this->Hor2P->ResumeLayout(false);
+			this->Hor2P->PerformLayout();
+			this->Hor3P->ResumeLayout(false);
+			this->Hor3P->PerformLayout();
+			this->Hor4P->ResumeLayout(false);
+			this->Hor4P->PerformLayout();
+			this->Hor5P->ResumeLayout(false);
+			this->Hor5P->PerformLayout();
+			this->Hor6P->ResumeLayout(false);
+			this->Hor6P->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-	
+
 	}
-	
-private: System::Void Confirmtime_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	private: System::Void Confirmtime_Click(System::Object^  sender, System::EventArgs^  e) {
+		auto arr_hor = gcnew cli::array<System::Windows::Forms::Label^>(6);
+		auto arr_N = gcnew cli::array<System::Windows::Forms::Label^>(6);
+		auto arr_HorP = gcnew cli::array<System::Windows::Forms::Panel^>(6);
+		arr_hor[0] = hor1;
+		arr_hor[1] = hor2;
+		arr_hor[2] = hor3;
+		arr_hor[3] = hor4;
+		arr_hor[4] = hor5;
+		arr_hor[5] = hor6;
+		arr_N[0] = N1;
+		arr_N[1] = N2;
+		arr_N[2] = N3;
+		arr_N[3] = N4;
+		arr_N[4] = N5;
+		arr_N[5] = N6;
+		arr_HorP[0] = Hor1P;
+		arr_HorP[1] = Hor2P;
+		arr_HorP[2] = Hor3P;
+		arr_HorP[3] = Hor4P;
+		arr_HorP[4] = Hor5P;
+		arr_HorP[5] = Hor6P;
+
 		String ^ start = Start_T->Text;
 		String ^ end = End_T->Text;
 		int start_convert = Convert::ToInt32(start);
 		int end_convert = Convert::ToInt32(end);
-		SeatApi s(start_convert,end_convert);
-		string *temp=s.get_hor();
-		hor1->Text = gcnew String(temp[0].c_str());
-		hor2->Text = gcnew String(temp[1].c_str());
-		hor3->Text = gcnew String(temp[2].c_str());
-		hor4->Text = gcnew String(temp[3].c_str());
-		hor5->Text = gcnew String(temp[4].c_str());
-		hor6->Text = gcnew String(temp[5].c_str());
-		N1->Text = Convert::ToString(s.empty_seat[0]);
-		N2->Text = Convert::ToString(s.empty_seat[1]);
-		N3->Text = Convert::ToString(s.empty_seat[2]);
-		N4->Text = Convert::ToString(s.empty_seat[3]);
-		N5->Text = Convert::ToString(s.empty_seat[4]);
-		N6->Text = Convert::ToString(s.empty_seat[5]);
-		hor1->Visible = true;
-		hor2->Visible = true;
-		hor3->Visible = true;
-		hor4->Visible = true;
-		hor5->Visible = true;
-		hor6->Visible = true;
-		N1->Visible = true;
-		N2->Visible = true;
-		N3->Visible = true;
-		N4->Visible = true;
-		N5->Visible = true;
-		N6->Visible = true;
+		SeatApi s(start_convert, end_convert);
+		string *temp = s.get_hor();
+		for (int i = 0; i < 6; i++) {
+			arr_hor[i]->Visible = true;
+			arr_N[i]->Visible = true;
+			arr_HorP[i]->Visible = true;
+			arr_hor[i]->Text = gcnew String(temp[i].c_str());
+			arr_N[i]->Text = Convert::ToString(s.empty_seat[i]);
+			if (s.empty_seat[i] > 27 && s.empty_seat[i] <= 36) {
+				arr_HorP[i]->BackColor = System::Drawing::Color::Lime;
+			}
+			else if (s.empty_seat[i] >= 18 && s.empty_seat[i] <= 27) {
+				arr_HorP[i]->BackColor = System::Drawing::Color::Yellow;
+			}
+			else if (s.empty_seat[i] >= 9 && s.empty_seat[i] < 18) {
+				arr_HorP[i]->BackColor	= System::Drawing::Color::OrangeRed;
+			}
+			else if (s.empty_seat[i] >= 0 && s.empty_seat[i] < 9) {
+				arr_HorP[i]->BackColor = System::Drawing::Color::Red;
+			}
+		}
+
+
+	}
+
+private: System::Void Hor1P_Click(System::Object^  sender, System::EventArgs^  e) {
+	SeatApi s(0);
+	Table t;
+	this->Hide();
+	t.ShowDialog();
+	this->Show();
+
+}
+
+private: System::Void Hor2P_Click(System::Object^  sender, System::EventArgs^  e) {
+	SeatApi s(1);
+	Table t;
+	this->Hide();
+	t.ShowDialog();
+	this->Show();
+}
+private: System::Void Hor3P_Click(System::Object^  sender, System::EventArgs^  e) {
+	SeatApi s(2);
+	Table t;
+	this->Hide();
+	t.ShowDialog();
+	this->Show();
+}
+private: System::Void Hor4P_Click(System::Object^  sender, System::EventArgs^  e) {
+	SeatApi s(3);
+	Table t;
+	this->Hide();
+	t.ShowDialog();
+	this->Show();
+}
+private: System::Void Hor5P_Click(System::Object^  sender, System::EventArgs^  e) {
+	SeatApi s(4);
+	Table t;
+	this->Hide();
+	t.ShowDialog();
+	this->Show();
+}
+private: System::Void Hor6P_Click(System::Object^  sender, System::EventArgs^  e) {
+	SeatApi s(5);
+	Table t;
+	this->Hide();
+	t.ShowDialog();
+	this->Show();
+}
+private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->Hide();
 }
 };
 }

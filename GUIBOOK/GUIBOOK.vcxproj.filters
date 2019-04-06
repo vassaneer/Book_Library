@@ -33,6 +33,9 @@
     <ClCompile Include="..\class\seat_include.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -53,6 +56,9 @@
     <ClInclude Include="..\class\seat_include.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
@@ -67,9 +73,14 @@
     <EmbeddedResource Include="Ruleofuse.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="Table.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Data.txt" />
     <Text Include="seat.txt" />
+    <Text Include="Temp_seat.txt" />
+    <Text Include="Temp_Time.txt" />
   </ItemGroup>
 </Project>
