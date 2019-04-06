@@ -17,6 +17,8 @@ int main()//array<String^>^ args)
 
 	GUIBOOK::MyForm form;
 	Application::Run(%form);
+	//GUIBOOK::Server_select form;
+	//Application::Run(%form);
 	return 0;
 }
 

@@ -296,6 +296,10 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 		this->Hide();
 		Server_select server;
 		server.ShowDialog();
+		this->Show();
+		IDbox->Text = "";
+		Passwordbox->Text = "";
+		i = 0;
 	}
 	else if (s.check_login(id_convert, pass_convert) == 2) {
 		i++;
