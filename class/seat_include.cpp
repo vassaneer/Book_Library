@@ -227,7 +227,7 @@ bool SeatApi::check_seat(int j,int k) {
 		return false;
 	}
 }
-
+  
 void SeatApi::choose_hor(int hor) {
 	ofstream add("Temp_seat.txt");
 	add << hor;

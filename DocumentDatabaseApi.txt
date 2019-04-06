@@ -1,0 +1,31 @@
+Documentation
+#include “data_include”
+
+Class DatabaseApi
+
+General:
+Attributes:Private
+	int id -store id number in CMU ex.”610610XXX”
+	string name -store name id to login ex.”ake12”
+	string pass -store password to login ex.”1234XXX”
+	float Time -store how long are you use program ex.”5”
+	string last_time -store current time as you used program ex.”2019-03-31.22:23:24”
+	int credit -store credit number ex.”100”
+	bool book_seat_yet -check this id could book seat 
+
+Behavior:Public
+	int check_login(string name,string pass) -function to check login 
+@argument 
+-name → idname  to login
+-pass → password to login
+	bool check_register(int student_id) -function to check this student id used to regist
+@argument
+-student_id → id student in CMU
+	void AddData(int student_id, string name, string pass) -function to add data to data.txt
+@argument
+-student_id →  id student in CMU
+-name → idname  to login
+-pass → password to login
+	bool set_book_yet() -to set this id booked seat
+	string DatabaseApi::currentDateTime() -to store this last time used
+	
