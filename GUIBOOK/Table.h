@@ -36,6 +36,7 @@ namespace GUIBOOK {
 			}
 		}
 	private: cli::array<System::Windows::Forms::Panel^>  ^PanelArr;
+	private: cli::array<System::Windows::Forms::Label^>  ^LabelArr;
 	private: System::Windows::Forms::Panel^  A1P;
 	private: System::Windows::Forms::Label^  A1T;
 	private: System::Windows::Forms::Panel^  A2P;
@@ -380,6 +381,8 @@ private: System::Windows::Forms::Button^  back;
 			this->A1T->Size = System::Drawing::Size(43, 29);
 			this->A1T->TabIndex = 0;
 			this->A1T->Text = L"A1";
+			this->A1T->Click += gcnew System::EventHandler(this, &Table::A1T_Click);
+			this->A1T->DoubleClick += gcnew System::EventHandler(this, &Table::A1T_DoubleClick);
 			// 
 			// A2P
 			// 
@@ -401,6 +404,8 @@ private: System::Windows::Forms::Button^  back;
 			this->A2T->Size = System::Drawing::Size(43, 29);
 			this->A2T->TabIndex = 0;
 			this->A2T->Text = L"A2";
+			this->A2T->Click += gcnew System::EventHandler(this, &Table::A2T_Click);
+			this->A2T->DoubleClick += gcnew System::EventHandler(this, &Table::A2T_DoubleClick);
 			// 
 			// A3P
 			// 
@@ -422,6 +427,8 @@ private: System::Windows::Forms::Button^  back;
 			this->A3T->Size = System::Drawing::Size(43, 29);
 			this->A3T->TabIndex = 0;
 			this->A3T->Text = L"A3";
+			this->A3T->Click += gcnew System::EventHandler(this, &Table::A3T_Click);
+			this->A3T->DoubleClick += gcnew System::EventHandler(this, &Table::A3T_DoubleClick);
 			// 
 			// A4P
 			// 
@@ -443,6 +450,8 @@ private: System::Windows::Forms::Button^  back;
 			this->A4T->Size = System::Drawing::Size(43, 29);
 			this->A4T->TabIndex = 0;
 			this->A4T->Text = L"A4";
+			this->A4T->Click += gcnew System::EventHandler(this, &Table::A4T_Click);
+			this->A4T->DoubleClick += gcnew System::EventHandler(this, &Table::A4T_DoubleClick);
 			// 
 			// A5P
 			// 
@@ -464,6 +473,8 @@ private: System::Windows::Forms::Button^  back;
 			this->A5T->Size = System::Drawing::Size(43, 29);
 			this->A5T->TabIndex = 0;
 			this->A5T->Text = L"A5";
+			this->A5T->Click += gcnew System::EventHandler(this, &Table::A5T_Click);
+			this->A5T->DoubleClick += gcnew System::EventHandler(this, &Table::A5T_DoubleClick);
 			// 
 			// A6P
 			// 
@@ -485,6 +496,8 @@ private: System::Windows::Forms::Button^  back;
 			this->A6T->Size = System::Drawing::Size(43, 29);
 			this->A6T->TabIndex = 0;
 			this->A6T->Text = L"A6";
+			this->A6T->Click += gcnew System::EventHandler(this, &Table::A6T_Click);
+			this->A6T->DoubleClick += gcnew System::EventHandler(this, &Table::A6T_DoubleClick);
 			// 
 			// AP
 			// 
@@ -494,6 +507,8 @@ private: System::Windows::Forms::Button^  back;
 			this->AP->Name = L"AP";
 			this->AP->Size = System::Drawing::Size(153, 54);
 			this->AP->TabIndex = 2;
+			this->AP->Click += gcnew System::EventHandler(this, &Table::AP_Click);
+			this->AP->DoubleClick += gcnew System::EventHandler(this, &Table::AP_DoubleClick);
 			// 
 			// AT
 			// 
@@ -506,10 +521,11 @@ private: System::Windows::Forms::Button^  back;
 			this->AT->Size = System::Drawing::Size(37, 36);
 			this->AT->TabIndex = 1;
 			this->AT->Text = L"A";
+			this->AT->Click += gcnew System::EventHandler(this, &Table::AT_Click);
 			// 
 			// BP
 			// 
-			this->BP->BackColor = System::Drawing::Color::Green;
+			this->BP->BackColor = System::Drawing::Color::LimeGreen;
 			this->BP->Controls->Add(this->BT);
 			this->BP->Location = System::Drawing::Point(332, 191);
 			this->BP->Name = L"BP";
@@ -530,7 +546,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// B6P
 			// 
-			this->B6P->BackColor = System::Drawing::Color::Green;
+			this->B6P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B6P->Controls->Add(this->B6T);
 			this->B6P->Location = System::Drawing::Point(439, 251);
 			this->B6P->Name = L"B6P";
@@ -551,7 +567,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// B5P
 			// 
-			this->B5P->BackColor = System::Drawing::Color::Green;
+			this->B5P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B5P->Controls->Add(this->B5T);
 			this->B5P->Location = System::Drawing::Point(385, 251);
 			this->B5P->Name = L"B5P";
@@ -572,7 +588,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// B4P
 			// 
-			this->B4P->BackColor = System::Drawing::Color::Green;
+			this->B4P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B4P->Controls->Add(this->B4T);
 			this->B4P->Location = System::Drawing::Point(333, 251);
 			this->B4P->Name = L"B4P";
@@ -593,7 +609,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// B3P
 			// 
-			this->B3P->BackColor = System::Drawing::Color::Green;
+			this->B3P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B3P->Controls->Add(this->B3T);
 			this->B3P->Location = System::Drawing::Point(437, 142);
 			this->B3P->Name = L"B3P";
@@ -614,7 +630,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// B2P
 			// 
-			this->B2P->BackColor = System::Drawing::Color::Green;
+			this->B2P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B2P->Controls->Add(this->B2T);
 			this->B2P->Location = System::Drawing::Point(385, 142);
 			this->B2P->Name = L"B2P";
@@ -635,7 +651,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// B1P
 			// 
-			this->B1P->BackColor = System::Drawing::Color::Green;
+			this->B1P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B1P->Controls->Add(this->B1T);
 			this->B1P->Location = System::Drawing::Point(332, 142);
 			this->B1P->Name = L"B1P";
@@ -1097,7 +1113,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// FP
 			// 
-			this->FP->BackColor = System::Drawing::Color::DeepPink;
+			this->FP->BackColor = System::Drawing::Color::HotPink;
 			this->FP->Controls->Add(this->FT);
 			this->FP->Location = System::Drawing::Point(587, 512);
 			this->FP->Name = L"FP";
@@ -1118,7 +1134,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// F6P
 			// 
-			this->F6P->BackColor = System::Drawing::Color::DeepPink;
+			this->F6P->BackColor = System::Drawing::Color::HotPink;
 			this->F6P->Controls->Add(this->F6T);
 			this->F6P->Location = System::Drawing::Point(694, 572);
 			this->F6P->Name = L"F6P";
@@ -1139,7 +1155,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// F5P
 			// 
-			this->F5P->BackColor = System::Drawing::Color::DeepPink;
+			this->F5P->BackColor = System::Drawing::Color::HotPink;
 			this->F5P->Controls->Add(this->F5T);
 			this->F5P->Location = System::Drawing::Point(640, 572);
 			this->F5P->Name = L"F5P";
@@ -1160,7 +1176,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// F4P
 			// 
-			this->F4P->BackColor = System::Drawing::Color::DeepPink;
+			this->F4P->BackColor = System::Drawing::Color::HotPink;
 			this->F4P->Controls->Add(this->F4T);
 			this->F4P->Location = System::Drawing::Point(588, 572);
 			this->F4P->Name = L"F4P";
@@ -1181,7 +1197,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// F3P
 			// 
-			this->F3P->BackColor = System::Drawing::Color::DeepPink;
+			this->F3P->BackColor = System::Drawing::Color::HotPink;
 			this->F3P->Controls->Add(this->F3T);
 			this->F3P->Location = System::Drawing::Point(692, 463);
 			this->F3P->Name = L"F3P";
@@ -1202,7 +1218,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// F2P
 			// 
-			this->F2P->BackColor = System::Drawing::Color::DeepPink;
+			this->F2P->BackColor = System::Drawing::Color::HotPink;
 			this->F2P->Controls->Add(this->F2T);
 			this->F2P->Location = System::Drawing::Point(640, 463);
 			this->F2P->Name = L"F2P";
@@ -1223,7 +1239,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			// F1P
 			// 
-			this->F1P->BackColor = System::Drawing::Color::DeepPink;
+			this->F1P->BackColor = System::Drawing::Color::HotPink;
 			this->F1P->Controls->Add(this->F1T);
 			this->F1P->Location = System::Drawing::Point(587, 463);
 			this->F1P->Name = L"F1P";
@@ -1397,6 +1413,7 @@ private: System::Windows::Forms::Button^  back;
 	private: System::Void Table_Load(System::Object^  sender, System::EventArgs^  e) {
 		SeatApi s;
 		auto arr_Chair = gcnew cli::array<System::Windows::Forms::Panel^>(36);
+		auto arr_Chair_T= gcnew cli::array<System::Windows::Forms::Label^>(36);
 		arr_Chair[0] = A1P;
 		arr_Chair[1] = A2P;
 		arr_Chair[2] = A3P;
@@ -1433,16 +1450,118 @@ private: System::Windows::Forms::Button^  back;
 		arr_Chair[33] = F4P;
 		arr_Chair[34] = F5P;
 		arr_Chair[35] = F6P;
+		arr_Chair_T[0] = A1T;
+		arr_Chair_T[1] = A2T;
+		arr_Chair_T[2] = A3T;
+		arr_Chair_T[3] = A4T;
+		arr_Chair_T[4] = A5T;
+		arr_Chair_T[5] = A6T;
+		arr_Chair_T[6] = B1T;
+		arr_Chair_T[7] = B2T;
+		arr_Chair_T[8] = B3T;
+		arr_Chair_T[9] = B4T;
+		arr_Chair_T[10] = B5T;
+		arr_Chair_T[11] = B6T;
+		arr_Chair_T[12] = C1T;
+		arr_Chair_T[13] = C2T;
+		arr_Chair_T[14] = C3T;
+		arr_Chair_T[15] = C4T;
+		arr_Chair_T[16] = C5T;
+		arr_Chair_T[17] = C6T;
+		arr_Chair_T[18] = D1T;
+		arr_Chair_T[19] = D2T;
+		arr_Chair_T[20] = D3T;
+		arr_Chair_T[21] = D4T;
+		arr_Chair_T[22] = D5T;
+		arr_Chair_T[23] = D6T;
+		arr_Chair_T[24] = E1T;
+		arr_Chair_T[25] = E2T;
+		arr_Chair_T[26] = E3T;
+		arr_Chair_T[27] = E4T;
+		arr_Chair_T[28] = E5T;
+		arr_Chair_T[29] = E6T;
+		arr_Chair_T[30] = F1T;
+		arr_Chair_T[31] = F2T;
+		arr_Chair_T[32] = F3T;
+		arr_Chair_T[33] = F4T;
+		arr_Chair_T[34] = F5T;
+		arr_Chair_T[35] = F6T;
 		for (int i = 0; i < 6; i++) {
 			for(int j = 0; j < 6; j++){
 				if (!s.check_seat(i, j)) {
 					arr_Chair[(j*6)+i]->BackColor = System::Drawing::Color::Red;
+					arr_Chair_T[(j * 6) + i]->Enabled = false;
 				}
 			}
 		}
 	}
 private: System::Void back_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();
+}
+private: System::Void A1T_Click(System::Object^  sender, System::EventArgs^  e) {
+	A1P->BackColor= System::Drawing::Color::Orange;
+}
+
+private: System::Void A2T_Click(System::Object^  sender, System::EventArgs^  e) {
+	A2P->BackColor = System::Drawing::Color::Orange;
+}
+private: System::Void A1T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
+	A1P->BackColor = System::Drawing::Color::Gold;
+}
+private: System::Void A2T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
+	A2P->BackColor = System::Drawing::Color::Gold;
+}
+private: System::Void A3T_Click(System::Object^  sender, System::EventArgs^  e) {
+	A3P->BackColor = System::Drawing::Color::Orange;
+}
+private: System::Void AT_Click(System::Object^  sender, System::EventArgs^  e) {
+	AP->BackColor = System::Drawing::Color::Orange;
+	A1P->BackColor = System::Drawing::Color::Orange;
+	A2P->BackColor = System::Drawing::Color::Orange;
+	A3P->BackColor = System::Drawing::Color::Orange;
+	A4P->BackColor = System::Drawing::Color::Orange;
+	A5P->BackColor = System::Drawing::Color::Orange;
+	A6P->BackColor = System::Drawing::Color::Orange;
+}
+private: System::Void A4T_Click(System::Object^  sender, System::EventArgs^  e) {
+	A4P->BackColor = System::Drawing::Color::Orange;
+}
+private: System::Void A5T_Click(System::Object^  sender, System::EventArgs^  e) {
+	A5P->BackColor = System::Drawing::Color::Orange;
+}
+private: System::Void A6T_Click(System::Object^  sender, System::EventArgs^  e) {
+	A6P->BackColor = System::Drawing::Color::Orange;
+}
+private: System::Void A3T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
+	A3P->BackColor = System::Drawing::Color::Gold;
+}
+private: System::Void A4T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
+	A4P->BackColor = System::Drawing::Color::Gold;
+}
+private: System::Void A5T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
+	A5P->BackColor = System::Drawing::Color::Gold;
+}
+private: System::Void A6T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
+	A6P->BackColor = System::Drawing::Color::Gold;
+}
+private: System::Void AP_Click(System::Object^  sender, System::EventArgs^  e) {
+	AP->BackColor = System::Drawing::Color::Gold;
+	A1P->BackColor = System::Drawing::Color::Gold;
+	A2P->BackColor = System::Drawing::Color::Gold;
+	A3P->BackColor = System::Drawing::Color::Gold;
+	A4P->BackColor = System::Drawing::Color::Gold;
+	A5P->BackColor = System::Drawing::Color::Gold;
+	A6P->BackColor = System::Drawing::Color::Gold;
+}
+private: System::Void AP_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
+	AP->BackColor = System::Drawing::Color::Orange;
+	A1P->BackColor = System::Drawing::Color::Orange;
+	A2P->BackColor = System::Drawing::Color::Orange;
+	A3P->BackColor = System::Drawing::Color::Orange;
+	A4P->BackColor = System::Drawing::Color::Orange;
+	A5P->BackColor = System::Drawing::Color::Orange;
+	A6P->BackColor = System::Drawing::Color::Orange;
+
 }
 };
 }
