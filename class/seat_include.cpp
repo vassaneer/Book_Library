@@ -10,7 +10,7 @@
 #include <algorithm>
 using namespace std;
 
-SeatApi::SeatApi(int start, int end){
+SeatApi::SeatApi(int start,int end){
     ifstream seat_txt("seat.txt");
     string textline;
     int text_index=0;
@@ -28,7 +28,6 @@ SeatApi::SeatApi(int start, int end){
                 text_index++;
                 while(textline[text_index]!=']'){
                     this->seat[i][j][k][f]=textline[text_index]-'0';
-                    //this->sum_seat[i][j]+=seat[i][j][k][f];
                     f++;
                     text_index+=2;
             }
@@ -45,8 +44,7 @@ SeatApi::SeatApi(int start, int end){
         i++;
     }
     seat_txt.close();
-	arrange_seat_hor(start, end);
-
+    arrange_seat_hor(start,end);
 };
 
 void SeatApi::arrange_seat_hor(int index_start,int index_end){
@@ -55,10 +53,13 @@ void SeatApi::arrange_seat_hor(int index_start,int index_end){
         for(int j=0;j<6;j++){
             for(int k=0;k<6;k++){
                 for(int f=index_start;f<index_start+(index_end-index_start);f++){
-                    sum_seat[i]+=seat[i][j][k][f];
                     get_empty+=seat[i][j][k][f];
                 }
-                if(get_empty==0) this->empty_seat[i]++;
+                if(get_empty==0) {
+                    empty_seat[i]++;
+                    }else{
+                        sum_check_seat[i][j][k]++;
+                    }
                 get_empty=0;
             }
         }
@@ -67,17 +68,25 @@ void SeatApi::arrange_seat_hor(int index_start,int index_end){
     for(int i=0;i<6;i++){
         flag=false;
         for(int j=0;j<5;j++)
-            if(this->sum_seat[j]>this->sum_seat[j+1]){
-                swap(this->sum_seat[j],this->sum_seat[j+1]);
+            if(this->empty_seat[j]>this->empty_seat[j+1]){
+                swap(this->empty_seat[j],this->empty_seat[j+1]);
                 swap(this->hor[j],this->hor[j+1]);
                 swap(this->seat[j],this->seat[j+1]);
-                swap(empty_seat[j],empty_seat[j+1]);
+                swap(sum_check_seat[j],sum_check_seat[j+1]);
                 flag=true;
                 }
         if(!flag) break;
     }
     // for(int k=0;k<6;k++) cout<<this->sum_seat[k]<<" "<<this->hor[k]<<endl;
-    // for(int i=0;i<6;i++) for(int j=0;j<6;j++) for(int k=0;k<6;k++) cout<<this->seat[i][j][k]<<" "<<i<<" "<<j<<" "<<k<<endl;
+    // for(int i=0;i<6;i++) {
+    //     for(int j=0;j<6;j++){ 
+    //         for(int k=0;k<6;k++){
+    //             cout<<sum_check_seat[i][j][k];
+    //         }
+    //         cout<<endl;
+    //     }
+    // } 
+    // cout<<this->seat[i][j][k]<<" "<<i<<" "<<j<<" "<<k<<endl;
 };
 
 void SeatApi::book_seat(int i, int j,int k,int start,int end){
@@ -117,6 +126,11 @@ void SeatApi::setzero(){
     }
 };
 
-string *SeatApi::get_hor() {
-	return this->hor;
+string *SeatApi::get_hor(){
+    return hor;
+}
+
+bool SeatApi::check_seat(int i,int j,int k){
+    if(sum_check_seat[i][j][k]==0) return true;
+    else return false;
 }
