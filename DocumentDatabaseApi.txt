@@ -14,7 +14,8 @@ Attributes:Private
 	bool book_seat_yet -check this id could book seat 
 
 Behavior:Public
-	int check_login(string name,string pass) -function to check login @argument 
+	int check_login(string name,string pass) -function to check login 
+@argument 
 -name → idname  to login
 -pass → password to login
 	bool check_register(int student_id) -function to check this student id used to regist
