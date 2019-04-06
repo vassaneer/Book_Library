@@ -12,15 +12,15 @@ class SeatApi{
     private:
         string *hor=new string[6]; //Arrays name of hor
         int seat[6][6][6][24]; //Check seat in each hor 
-        int sum_seat[6]={}; //not fixed 
-        //bool update =false;  
-        //bool hor_isfull[6]; //Arrays of 
+        int sum_check_seat[6][6][6]={};
     public:
         SeatApi(int,int);
         int empty_seat[6]={};
         void arrange_seat_hor(int ,int ); //not fixed
         void book_seat(int ,int ,int ,int ,int ); // book seat in hor
+        void clear_book();
         string *get_hor();
+        bool check_seat(int,int,int);
         void update();
         void setzero();
 };
