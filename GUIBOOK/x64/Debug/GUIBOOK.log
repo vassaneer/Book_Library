@@ -1,11 +1,1 @@
-﻿  seat_include.cpp
-c:\users\asus\desktop\project\class\seat_include.cpp(23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\asus\desktop\project\class\seat_include.cpp(64): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\asus\desktop\project\class\seat_include.cpp(101): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  MyForm.cpp
-  Register_ID.cpp
-  Server_select.cpp
-  Table.cpp
-  Generating Code...
-  data_include.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  GUIBOOK.vcxproj -> C:\Users\ASUS\Desktop\Project\x64\Debug\GUIBOOK.exe
+﻿  GUIBOOK.vcxproj -> C:\Users\Apichart\Desktop\project\Book_Library\x64\Debug\GUIBOOK.exe

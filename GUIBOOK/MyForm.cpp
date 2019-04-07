@@ -15,10 +15,10 @@ int main()//array<String^>^ args)
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	//GUIBOOK::MyForm form;
-	//Application::Run(%form);
-	GUIBOOK::Server_select form;
+	GUIBOOK::MyForm form;
 	Application::Run(%form);
+	//GUIBOOK::Server_select form;
+	//Application::Run(%form);
 	return 0;
 }
 

@@ -16,7 +16,7 @@ namespace GUIBOOK {
 	/// <summary>
 	/// Summary for Register_ID
 	/// </summary>
-	public ref class Register_ID : public System::Windows::Forms::Form 
+	public ref class Register_ID : public System::Windows::Forms::Form
 	{
 	public:
 		Register_ID(void)
@@ -339,73 +339,73 @@ namespace GUIBOOK {
 		Ruleofuse Rule;
 		Rule.ShowDialog();
 	}
-private: System::Void Register_ID_Load(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
-	
+	private: System::Void Register_ID_Load(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
 
 
-	
-}
-private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-	if (checkBox1->Checked) {
-		DatabaseApi s;
-		String ^ id = Student_id->Text;
-		String ^ name = User_name->Text;
-		String ^ pass = User_Pass->Text;
-		String ^ confirm = Confirm_pass->Text;
-		int id_convert;
-		string name_convert;
-		string pass_convert;
-		string confirm_convert;
-		if (id != "" || name != "" || pass != "" || confirm != "") {
-			id_convert = Convert::ToInt32(id);
-			name_convert = msclr::interop::marshal_as<string>(name);
-			pass_convert = msclr::interop::marshal_as<string>(pass);
-			confirm_convert = msclr::interop::marshal_as<string>(confirm);
-			Student_id->Text = "";
-			User_name->Text = "";
-			User_Pass->Text = "";
-			if (s.check_register(id_convert) == true || sizeof(id_convert) != 9) {
-				MessageBox::Show("No id/id used!!!");
+
+
+	}
+	private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (checkBox1->Checked) {
+			DatabaseApi s;
+			String ^ id = Student_id->Text;
+			String ^ name = User_name->Text;
+			String ^ pass = User_Pass->Text;
+			String ^ confirm = Confirm_pass->Text;
+			int id_convert;
+			string name_convert;
+			string pass_convert;
+			string confirm_convert;
+			if (id != "" || name != "" || pass != "" || confirm != "") {
+				id_convert = Convert::ToInt32(id);
+				name_convert = msclr::interop::marshal_as<string>(name);
+				pass_convert = msclr::interop::marshal_as<string>(pass);
+				confirm_convert = msclr::interop::marshal_as<string>(confirm);
 				Student_id->Text = "";
 				User_name->Text = "";
 				User_Pass->Text = "";
-				Confirm_pass->Text = "";
-			}
-			else if (s.check_login(name_convert, pass_convert) == 2) {
-				MessageBox::Show("ª×èÍ¹Õé¶Ù¡µÑé§ä»áÅéÇ");
-				Student_id->Text = "";
-				User_name->Text = "";
-				User_Pass->Text = "";
-				Confirm_pass->Text = "";
-			}
-			else if (pass_convert != confirm_convert) {
-				MessageBox::Show("ÃËÑÊäÁèµÃ§¡Ñ¹");
-				Confirm_pass->Text = "";
-			}
+				if (s.check_register(id_convert) == true || sizeof(id_convert) != 9) {
+					MessageBox::Show("No id/id used!!!");
+					Student_id->Text = "";
+					User_name->Text = "";
+					User_Pass->Text = "";
+					Confirm_pass->Text = "";
+				}
+				else if (s.check_login(name_convert, pass_convert) == 2) {
+					MessageBox::Show("ï¿½ï¿½ï¿½Í¹ï¿½ï¿½Ù¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+					Student_id->Text = "";
+					User_name->Text = "";
+					User_Pass->Text = "";
+					Confirm_pass->Text = "";
+				}
+				else if (pass_convert != confirm_convert) {
+					MessageBox::Show("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã§ï¿½Ñ¹");
+					Confirm_pass->Text = "";
+				}
 
+				else {
+					MessageBox::Show("Complete!!!");
+					s.AddData(id_convert, name_convert, pass_convert);
+					this->Hide();
+
+				}
+			}
 			else {
-				MessageBox::Show("Complete!!!");
-				s.AddData(id_convert, name_convert, pass_convert);
-				this->Hide();
-
+				MessageBox::Show("Error!!!");
+				Student_id->Text = "";
+				User_name->Text = "";
+				User_Pass->Text = "";
+				Confirm_pass->Text = "";
+				id = "0";
 			}
 		}
 		else {
-			MessageBox::Show("Error!!!");
-			Student_id->Text = "";
-			User_name->Text = "";
-			User_Pass->Text = "";
-			Confirm_pass->Text = "";
-			id = "0";
+			MessageBox::Show("Please Check Box!!!");
 		}
-	}
-	else {
-		MessageBox::Show("Please Check Box!!!");
-	}
-}
-};
+	};
+	};
 }
