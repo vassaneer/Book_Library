@@ -27,6 +27,9 @@ int DatabaseApi::check_login(string name_input, string pass_input) {
 				ofstream order_id("Temp_OrderId.txt");
 				order_id<<i;
 				order_id.close();
+				ofstream check_book_yet("Temp_BookYet.txt");
+				check_book_yet<<textline.substr(textline.size()-1,1);
+				check_book_yet.close();
 				return 1;
 				}
 			else {
@@ -122,3 +125,4 @@ void DatabaseApi::set_single_book(){
 		source1<<line<<endl;
 	}
 }
+

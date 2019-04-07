@@ -16,7 +16,6 @@ class DatabaseApi{
         float Time;
         string last_time;
         int credit;
-        bool book_seat_yet=false;
     public:   
 		int check_login(string ,string); 
 		bool check_register(int);
