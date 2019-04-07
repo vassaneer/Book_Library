@@ -161,23 +161,12 @@ void SeatApi::arrange_seat_hor(int index_start, int index_end) {
 			}
 		if (!flag) break;
 	}
-	// for(int k=0;k<6;k++) cout<<this->sum_seat[k]<<" "<<this->hor[k]<<endl;
-	// for(int i=0;i<6;i++) {
-	//     for(int j=0;j<6;j++){ 
-	//         for(int k=0;k<6;k++){
-	//             cout<<sum_check_seat[i][j][k];
-	//         }
-	//         cout<<endl;
-	//     }
-	// } 
-	// cout<<this->seat[i][j][k]<<" "<<i<<" "<<j<<" "<<k<<endl;
 };
 
-void SeatApi::book_seat(int i, int j, int k, int start, int end) {
-	for (int f = start; f < start + (end - start); f++) {
-		this->seat[i][j][k][f] = 1;
-	}
-	arrange_seat_hor(start, end);
+void SeatApi::book_seat(int j, int k) {
+	ofstream add("Confirm_seat.txt");
+	add << j<<","<<k;
+	add.close();
 };
 
 void SeatApi::update() {
@@ -232,4 +221,27 @@ void SeatApi::choose_hor(int hor) {
 	ofstream add("Temp_seat.txt");
 	add << hor;
 	add.close();
+}
+
+void SeatApi::confirm_book(){
+	ifstream check_time("Temp_Time.txt");
+	string line;
+	getline(check_time, line);
+	int start = atoi(line.substr(0,1).c_str());
+	int end= atoi(line.substr(2, 1).c_str());
+	check_time.close();
+	ifstream check("Temp_seat.txt");
+	getline(check, line);
+	int hor = atoi(line.c_str());
+	check.close();
+	ifstream confirm("Confirm_seat.txt");
+	getline(confirm, line);
+	int table = atoi(line.substr(0,1).c_str());
+	int seat= atoi(line.substr(2, 1).c_str());
+	confirm.close();
+	for (int f = start; f < start + (end - start); f++) {
+		this->seat[hor][table][seat][f] = 1;
+	}
+	arrange_seat_hor(start, end);
+	update();
 }
