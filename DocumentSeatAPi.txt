@@ -1,0 +1,45 @@
+﻿Documentation
+#include “seat_include”
+
+Class SeatApi
+
+General:
+Attributes:Private
+	string *hor = new string[6] -Arrays name of hor
+	int seat[6][6][6][24] -Check seat in each hor   
+	int sum_check_seat[6][6][6] = {} -sum each seat at time start-end
+
+Attributes:Public
+	int empty_seat[6]  -check empty seat
+
+Behavior:Public:
+	SeatApi(int start, int end); -initialize with start-end time 
+@argument
+-start → keep from textbox start time
+-end → keep from textbox end time
+	SeatApi(int hor) -initialize with index hor
+@argument 
+-hor → from index menu button select hor
+	SeatApi(); -call to set this time not to book
+	void arrange_seat_hor(int start, int end) -to arrange hor with hour for selected
+@argument
+-start → keep from textbox start time
+-end → keep from textbox end time
+	void book_seat(int table, int chair) - book seat in hor
+@argument
+-table → index of table start from 0 to 6
+-chair → index of chair start from 0 to 6
+	void clear_book()
+	string *get_hor() -get name array of hor
+	bool check_seat(int table,int chair) -check each table each seat is empty
+@argument
+-table → index of table start from 0 to 6
+-chair → index of chair start from 0 to 6
+	void update() -to update to textfile
+	void setzero() -to set zero every seat
+	void choose_hor(int hor) -to choose hor to book seat and set to text file
+@argument
+-hor → from index menu button select hor
+	void confirm_book() -confirm your selection 
+
+	
