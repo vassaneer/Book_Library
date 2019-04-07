@@ -26,6 +26,7 @@ Behavior:Public
 -student_id →  id student in CMU
 -name → idname  to login
 -pass → password to login
-	bool set_book_yet() -to set this id booked seat
+	bool single_book() -to check possible to book seat by one
+	void set_single_book() -to set this id could book seat yet
 	string DatabaseApi::currentDateTime() -to store this last time used
 	
