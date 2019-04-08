@@ -163,11 +163,6 @@ void SeatApi::arrange_seat_hor(int index_start, int index_end) {
 	}
 };
 
-void SeatApi::book_seat(int j, int k) {
-	ofstream add("Confirm_seat.txt");
-	add << j<<","<<k;
-	add.close();
-};
 
 void SeatApi::update() {
 	ofstream seat_update("seat.txt");
@@ -205,7 +200,7 @@ string *SeatApi::get_hor() {
 }
 
 bool SeatApi::check_seat(int j,int k) {
-	ifstream check("Temp_seat.txt");
+	ifstream check("Temp_hor.txt");
 	string line;
 	getline(check, line);
 	int hor = atoi(line.c_str());
@@ -218,29 +213,26 @@ bool SeatApi::check_seat(int j,int k) {
 }
   
 void SeatApi::choose_hor(int hor) {
-	ofstream add("Temp_seat.txt");
+	ofstream add("Temp_hor.txt");
 	add << hor;
 	add.close();
 }
 
-void SeatApi::confirm_book(){
+void SeatApi::confirm_book(int table_index,vector<int>&chair_index){
 	ifstream check_time("Temp_Time.txt");
 	string line;
 	getline(check_time, line);
 	int start = atoi(line.substr(0,1).c_str());
 	int end= atoi(line.substr(2, 1).c_str());
 	check_time.close();
-	ifstream check("Temp_seat.txt");
+	ifstream check("Temp_hor.txt");
 	getline(check, line);
 	int hor = atoi(line.c_str());
 	check.close();
-	ifstream confirm("Confirm_seat.txt");
-	getline(confirm, line);
-	int table = atoi(line.substr(0,1).c_str());
-	int seat= atoi(line.substr(2, 1).c_str());
-	confirm.close();
 	for (int f = start; f < start + (end - start); f++) {
-		this->seat[hor][table][seat][f] = 1;
+		for (int k = 0; k < chair_index.size(); k++) {
+			this->seat[hor][table_index][chair_index[k]][f] = 1;
+		}
 	}
 	arrange_seat_hor(start, end);
 	update();

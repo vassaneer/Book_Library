@@ -80,10 +80,9 @@
   <ItemGroup>
     <Text Include="Data.txt" />
     <Text Include="seat.txt" />
-    <Text Include="Temp_seat.txt" />
     <Text Include="Temp_Time.txt" />
     <Text Include="Temp_Data.txt" />
-    <Text Include="Confirm_seat.txt" />
     <Text Include="Temp_OrderId.txt" />
+    <Text Include="Temp_hor.txt" />
   </ItemGroup>
 </Project>

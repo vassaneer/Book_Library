@@ -19,13 +19,12 @@ public:
 	SeatApi();
 	int empty_seat[6] = {}; //check empty seat
 	void arrange_seat_hor(int, int); //not fixed
-	void book_seat(int, int); // book seat in hor
 	void clear_book();
 	string *get_hor(); //get name array of hor
 	bool check_seat(int ,int); //check each seat is empty
 	void update(); //to update to textfile
 	void setzero(); //to set zero every seat
 	void choose_hor(int); //to choose hor to book seat
-	void confirm_book(); //confirm 
+	void confirm_book(int,vector<int>&); //confirm 
 };
 #endif

@@ -77,40 +77,34 @@ string DatabaseApi::currentDateTime() {
 	return buf;
 };
 
-bool DatabaseApi::single_book(){
-	ifstream order_id("Temp_OrderId.txt");
-	string line;
-	getline(order_id,line);
-	int order=atoi(line.c_str());
-	order_id.close();
+int DatabaseApi::book_yet(int id){
 	ifstream source("Data.txt");
-	int i=0;
-	while(true){
-		if(i==order){
-			getline(source,line);
-			int check_book_yet=atoi(line.substr(line.size()-1,1).c_str());
-			if(check_book_yet==0){
-				return true;
-			}else {
-				return false;
+	string line;
+	int i = 0;
+	while(getline(source,line)){
+		int check_id = atoi(line.substr(0 , 9).c_str());
+		if (check_id == id) {
+			int book_yet_check = atoi(line.substr(line.size() - 1, 1).c_str());		
+			if (book_yet_check == 1) {
+				return 1;
+			}
+			else {
+				this->id_confirm = i;
+				return 2;
 			}
 		}
 		i++;
 	}
+	return 0;
 };
 
-void DatabaseApi::set_single_book(){
-	string line;
-	ifstream order_id("Temp_OrderId.txt");
-	getline(order_id,line);
-	int order=atoi(line.c_str());
-	order_id.close();
+void DatabaseApi::set_book(int id_index){
 	ifstream source("Data.txt");
+	string line;
 	ofstream temp("Temp_Data.txt");
-	int i=0;
+	int i = 0;
 	while(getline(source,line)){
-		cout<<line<<endl;
-		if(i==order){
+		if(i==id_index){
 			temp<<line.substr(0,line.size()-1)<<1<<endl;
 		}else{
 			temp<<line<<endl;
