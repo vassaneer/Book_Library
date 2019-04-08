@@ -1,6 +1,6 @@
 #pragma once
 #include "seat_include.h"
-
+#include "data_include.h"
 namespace GUIBOOK {
 
 	using namespace System;
@@ -36,7 +36,8 @@ namespace GUIBOOK {
 			}
 		}
 	private: cli::array<System::Windows::Forms::Panel^>  ^PanelArr;
-	private: cli::array<System::Windows::Forms::Label^>  ^LabelArr;
+	private: cli::array<System::Windows::Forms::TextBox^>  ^TextBoxArr;
+	private: cli::array<System::Windows::Forms::CheckBox^>  ^CheckBoxArr;
 	private: System::Windows::Forms::Panel^  A1P;
 	private: System::Windows::Forms::Label^  A1T;
 	private: System::Windows::Forms::Panel^  A2P;
@@ -216,6 +217,38 @@ private: System::Windows::Forms::Panel^  F1P;
 
 private: System::Windows::Forms::Label^  F1T;
 private: System::Windows::Forms::Button^  back;
+private: System::Windows::Forms::CheckBox^  Chair1;
+private: System::Windows::Forms::CheckBox^  Chair2;
+private: System::Windows::Forms::CheckBox^  Chair4;
+
+
+
+
+private: System::Windows::Forms::CheckBox^  Chair3;
+private: System::Windows::Forms::CheckBox^  Chair6;
+
+
+private: System::Windows::Forms::CheckBox^  Chair5;
+private: System::Windows::Forms::CheckBox^  AllChair;
+private: System::Windows::Forms::ComboBox^  Table_list;
+
+
+
+private: System::Windows::Forms::TextBox^  ID1;
+private: System::Windows::Forms::TextBox^  ID2;
+private: System::Windows::Forms::TextBox^  ID4;
+
+
+
+private: System::Windows::Forms::TextBox^  ID3;
+private: System::Windows::Forms::TextBox^  ID6;
+
+
+private: System::Windows::Forms::TextBox^  ID5;
+private: System::Windows::Forms::Button^  Confirm_Book;
+
+
+
 
 
 
@@ -317,6 +350,21 @@ private: System::Windows::Forms::Button^  back;
 			this->F1P = (gcnew System::Windows::Forms::Panel());
 			this->F1T = (gcnew System::Windows::Forms::Label());
 			this->back = (gcnew System::Windows::Forms::Button());
+			this->Chair1 = (gcnew System::Windows::Forms::CheckBox());
+			this->Chair2 = (gcnew System::Windows::Forms::CheckBox());
+			this->Chair4 = (gcnew System::Windows::Forms::CheckBox());
+			this->Chair3 = (gcnew System::Windows::Forms::CheckBox());
+			this->Chair6 = (gcnew System::Windows::Forms::CheckBox());
+			this->Chair5 = (gcnew System::Windows::Forms::CheckBox());
+			this->AllChair = (gcnew System::Windows::Forms::CheckBox());
+			this->Table_list = (gcnew System::Windows::Forms::ComboBox());
+			this->ID1 = (gcnew System::Windows::Forms::TextBox());
+			this->ID2 = (gcnew System::Windows::Forms::TextBox());
+			this->ID4 = (gcnew System::Windows::Forms::TextBox());
+			this->ID3 = (gcnew System::Windows::Forms::TextBox());
+			this->ID6 = (gcnew System::Windows::Forms::TextBox());
+			this->ID5 = (gcnew System::Windows::Forms::TextBox());
+			this->Confirm_Book = (gcnew System::Windows::Forms::Button());
 			this->A1P->SuspendLayout();
 			this->A2P->SuspendLayout();
 			this->A3P->SuspendLayout();
@@ -365,7 +413,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->A1P->BackColor = System::Drawing::Color::Gold;
 			this->A1P->Controls->Add(this->A1T);
-			this->A1P->Location = System::Drawing::Point(68, 142);
+			this->A1P->Location = System::Drawing::Point(39, 99);
 			this->A1P->Name = L"A1P";
 			this->A1P->Size = System::Drawing::Size(46, 43);
 			this->A1P->TabIndex = 0;
@@ -381,14 +429,12 @@ private: System::Windows::Forms::Button^  back;
 			this->A1T->Size = System::Drawing::Size(43, 29);
 			this->A1T->TabIndex = 0;
 			this->A1T->Text = L"A1";
-			this->A1T->Click += gcnew System::EventHandler(this, &Table::A1T_Click);
-			this->A1T->DoubleClick += gcnew System::EventHandler(this, &Table::A1T_DoubleClick);
 			// 
 			// A2P
 			// 
 			this->A2P->BackColor = System::Drawing::Color::Gold;
 			this->A2P->Controls->Add(this->A2T);
-			this->A2P->Location = System::Drawing::Point(121, 142);
+			this->A2P->Location = System::Drawing::Point(92, 99);
 			this->A2P->Name = L"A2P";
 			this->A2P->Size = System::Drawing::Size(46, 43);
 			this->A2P->TabIndex = 1;
@@ -404,14 +450,12 @@ private: System::Windows::Forms::Button^  back;
 			this->A2T->Size = System::Drawing::Size(43, 29);
 			this->A2T->TabIndex = 0;
 			this->A2T->Text = L"A2";
-			this->A2T->Click += gcnew System::EventHandler(this, &Table::A2T_Click);
-			this->A2T->DoubleClick += gcnew System::EventHandler(this, &Table::A2T_DoubleClick);
 			// 
 			// A3P
 			// 
 			this->A3P->BackColor = System::Drawing::Color::Gold;
 			this->A3P->Controls->Add(this->A3T);
-			this->A3P->Location = System::Drawing::Point(173, 142);
+			this->A3P->Location = System::Drawing::Point(144, 99);
 			this->A3P->Name = L"A3P";
 			this->A3P->Size = System::Drawing::Size(46, 43);
 			this->A3P->TabIndex = 1;
@@ -427,14 +471,12 @@ private: System::Windows::Forms::Button^  back;
 			this->A3T->Size = System::Drawing::Size(43, 29);
 			this->A3T->TabIndex = 0;
 			this->A3T->Text = L"A3";
-			this->A3T->Click += gcnew System::EventHandler(this, &Table::A3T_Click);
-			this->A3T->DoubleClick += gcnew System::EventHandler(this, &Table::A3T_DoubleClick);
 			// 
 			// A4P
 			// 
 			this->A4P->BackColor = System::Drawing::Color::Gold;
 			this->A4P->Controls->Add(this->A4T);
-			this->A4P->Location = System::Drawing::Point(69, 251);
+			this->A4P->Location = System::Drawing::Point(40, 208);
 			this->A4P->Name = L"A4P";
 			this->A4P->Size = System::Drawing::Size(46, 43);
 			this->A4P->TabIndex = 1;
@@ -450,14 +492,12 @@ private: System::Windows::Forms::Button^  back;
 			this->A4T->Size = System::Drawing::Size(43, 29);
 			this->A4T->TabIndex = 0;
 			this->A4T->Text = L"A4";
-			this->A4T->Click += gcnew System::EventHandler(this, &Table::A4T_Click);
-			this->A4T->DoubleClick += gcnew System::EventHandler(this, &Table::A4T_DoubleClick);
 			// 
 			// A5P
 			// 
 			this->A5P->BackColor = System::Drawing::Color::Gold;
 			this->A5P->Controls->Add(this->A5T);
-			this->A5P->Location = System::Drawing::Point(121, 251);
+			this->A5P->Location = System::Drawing::Point(92, 208);
 			this->A5P->Name = L"A5P";
 			this->A5P->Size = System::Drawing::Size(46, 43);
 			this->A5P->TabIndex = 1;
@@ -473,14 +513,12 @@ private: System::Windows::Forms::Button^  back;
 			this->A5T->Size = System::Drawing::Size(43, 29);
 			this->A5T->TabIndex = 0;
 			this->A5T->Text = L"A5";
-			this->A5T->Click += gcnew System::EventHandler(this, &Table::A5T_Click);
-			this->A5T->DoubleClick += gcnew System::EventHandler(this, &Table::A5T_DoubleClick);
 			// 
 			// A6P
 			// 
 			this->A6P->BackColor = System::Drawing::Color::Gold;
 			this->A6P->Controls->Add(this->A6T);
-			this->A6P->Location = System::Drawing::Point(175, 251);
+			this->A6P->Location = System::Drawing::Point(146, 208);
 			this->A6P->Name = L"A6P";
 			this->A6P->Size = System::Drawing::Size(46, 43);
 			this->A6P->TabIndex = 1;
@@ -496,19 +534,15 @@ private: System::Windows::Forms::Button^  back;
 			this->A6T->Size = System::Drawing::Size(43, 29);
 			this->A6T->TabIndex = 0;
 			this->A6T->Text = L"A6";
-			this->A6T->Click += gcnew System::EventHandler(this, &Table::A6T_Click);
-			this->A6T->DoubleClick += gcnew System::EventHandler(this, &Table::A6T_DoubleClick);
 			// 
 			// AP
 			// 
 			this->AP->BackColor = System::Drawing::Color::Gold;
 			this->AP->Controls->Add(this->AT);
-			this->AP->Location = System::Drawing::Point(68, 191);
+			this->AP->Location = System::Drawing::Point(39, 148);
 			this->AP->Name = L"AP";
 			this->AP->Size = System::Drawing::Size(153, 54);
 			this->AP->TabIndex = 2;
-			this->AP->Click += gcnew System::EventHandler(this, &Table::AP_Click);
-			this->AP->DoubleClick += gcnew System::EventHandler(this, &Table::AP_DoubleClick);
 			// 
 			// AT
 			// 
@@ -521,13 +555,12 @@ private: System::Windows::Forms::Button^  back;
 			this->AT->Size = System::Drawing::Size(37, 36);
 			this->AT->TabIndex = 1;
 			this->AT->Text = L"A";
-			this->AT->Click += gcnew System::EventHandler(this, &Table::AT_Click);
 			// 
 			// BP
 			// 
 			this->BP->BackColor = System::Drawing::Color::LimeGreen;
 			this->BP->Controls->Add(this->BT);
-			this->BP->Location = System::Drawing::Point(332, 191);
+			this->BP->Location = System::Drawing::Point(40, 361);
 			this->BP->Name = L"BP";
 			this->BP->Size = System::Drawing::Size(153, 54);
 			this->BP->TabIndex = 9;
@@ -548,7 +581,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->B6P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B6P->Controls->Add(this->B6T);
-			this->B6P->Location = System::Drawing::Point(439, 251);
+			this->B6P->Location = System::Drawing::Point(147, 421);
 			this->B6P->Name = L"B6P";
 			this->B6P->Size = System::Drawing::Size(46, 43);
 			this->B6P->TabIndex = 4;
@@ -569,7 +602,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->B5P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B5P->Controls->Add(this->B5T);
-			this->B5P->Location = System::Drawing::Point(385, 251);
+			this->B5P->Location = System::Drawing::Point(93, 421);
 			this->B5P->Name = L"B5P";
 			this->B5P->Size = System::Drawing::Size(46, 43);
 			this->B5P->TabIndex = 5;
@@ -590,7 +623,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->B4P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B4P->Controls->Add(this->B4T);
-			this->B4P->Location = System::Drawing::Point(333, 251);
+			this->B4P->Location = System::Drawing::Point(41, 421);
 			this->B4P->Name = L"B4P";
 			this->B4P->Size = System::Drawing::Size(46, 43);
 			this->B4P->TabIndex = 6;
@@ -611,7 +644,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->B3P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B3P->Controls->Add(this->B3T);
-			this->B3P->Location = System::Drawing::Point(437, 142);
+			this->B3P->Location = System::Drawing::Point(145, 312);
 			this->B3P->Name = L"B3P";
 			this->B3P->Size = System::Drawing::Size(46, 43);
 			this->B3P->TabIndex = 7;
@@ -632,7 +665,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->B2P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B2P->Controls->Add(this->B2T);
-			this->B2P->Location = System::Drawing::Point(385, 142);
+			this->B2P->Location = System::Drawing::Point(93, 312);
 			this->B2P->Name = L"B2P";
 			this->B2P->Size = System::Drawing::Size(46, 43);
 			this->B2P->TabIndex = 8;
@@ -653,7 +686,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->B1P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B1P->Controls->Add(this->B1T);
-			this->B1P->Location = System::Drawing::Point(332, 142);
+			this->B1P->Location = System::Drawing::Point(40, 312);
 			this->B1P->Name = L"B1P";
 			this->B1P->Size = System::Drawing::Size(46, 43);
 			this->B1P->TabIndex = 3;
@@ -674,7 +707,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->CP->BackColor = System::Drawing::Color::Turquoise;
 			this->CP->Controls->Add(this->CT);
-			this->CP->Location = System::Drawing::Point(581, 191);
+			this->CP->Location = System::Drawing::Point(39, 578);
 			this->CP->Name = L"CP";
 			this->CP->Size = System::Drawing::Size(153, 54);
 			this->CP->TabIndex = 16;
@@ -695,7 +728,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->C6P->BackColor = System::Drawing::Color::Turquoise;
 			this->C6P->Controls->Add(this->C6T);
-			this->C6P->Location = System::Drawing::Point(688, 251);
+			this->C6P->Location = System::Drawing::Point(146, 638);
 			this->C6P->Name = L"C6P";
 			this->C6P->Size = System::Drawing::Size(46, 43);
 			this->C6P->TabIndex = 11;
@@ -716,7 +749,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->C5P->BackColor = System::Drawing::Color::Turquoise;
 			this->C5P->Controls->Add(this->C5T);
-			this->C5P->Location = System::Drawing::Point(634, 251);
+			this->C5P->Location = System::Drawing::Point(92, 638);
 			this->C5P->Name = L"C5P";
 			this->C5P->Size = System::Drawing::Size(46, 43);
 			this->C5P->TabIndex = 12;
@@ -737,7 +770,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->C4P->BackColor = System::Drawing::Color::Turquoise;
 			this->C4P->Controls->Add(this->C4T);
-			this->C4P->Location = System::Drawing::Point(582, 251);
+			this->C4P->Location = System::Drawing::Point(40, 638);
 			this->C4P->Name = L"C4P";
 			this->C4P->Size = System::Drawing::Size(46, 43);
 			this->C4P->TabIndex = 13;
@@ -758,7 +791,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->C3P->BackColor = System::Drawing::Color::Turquoise;
 			this->C3P->Controls->Add(this->C3T);
-			this->C3P->Location = System::Drawing::Point(686, 142);
+			this->C3P->Location = System::Drawing::Point(144, 529);
 			this->C3P->Name = L"C3P";
 			this->C3P->Size = System::Drawing::Size(46, 43);
 			this->C3P->TabIndex = 14;
@@ -779,7 +812,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->C2P->BackColor = System::Drawing::Color::Turquoise;
 			this->C2P->Controls->Add(this->C2T);
-			this->C2P->Location = System::Drawing::Point(634, 142);
+			this->C2P->Location = System::Drawing::Point(92, 529);
 			this->C2P->Name = L"C2P";
 			this->C2P->Size = System::Drawing::Size(46, 43);
 			this->C2P->TabIndex = 15;
@@ -800,7 +833,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->C1P->BackColor = System::Drawing::Color::Turquoise;
 			this->C1P->Controls->Add(this->C1T);
-			this->C1P->Location = System::Drawing::Point(581, 142);
+			this->C1P->Location = System::Drawing::Point(39, 529);
 			this->C1P->Name = L"C1P";
 			this->C1P->Size = System::Drawing::Size(46, 43);
 			this->C1P->TabIndex = 10;
@@ -821,7 +854,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->DP->BackColor = System::Drawing::Color::Blue;
 			this->DP->Controls->Add(this->DT);
-			this->DP->Location = System::Drawing::Point(74, 512);
+			this->DP->Location = System::Drawing::Point(232, 148);
 			this->DP->Name = L"DP";
 			this->DP->Size = System::Drawing::Size(153, 54);
 			this->DP->TabIndex = 16;
@@ -842,7 +875,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->D6P->BackColor = System::Drawing::Color::Blue;
 			this->D6P->Controls->Add(this->D6T);
-			this->D6P->Location = System::Drawing::Point(181, 572);
+			this->D6P->Location = System::Drawing::Point(339, 208);
 			this->D6P->Name = L"D6P";
 			this->D6P->Size = System::Drawing::Size(46, 43);
 			this->D6P->TabIndex = 11;
@@ -863,7 +896,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->D5P->BackColor = System::Drawing::Color::Blue;
 			this->D5P->Controls->Add(this->D5T);
-			this->D5P->Location = System::Drawing::Point(127, 572);
+			this->D5P->Location = System::Drawing::Point(285, 208);
 			this->D5P->Name = L"D5P";
 			this->D5P->Size = System::Drawing::Size(46, 43);
 			this->D5P->TabIndex = 12;
@@ -884,7 +917,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->D4P->BackColor = System::Drawing::Color::Blue;
 			this->D4P->Controls->Add(this->D4T);
-			this->D4P->Location = System::Drawing::Point(75, 572);
+			this->D4P->Location = System::Drawing::Point(233, 208);
 			this->D4P->Name = L"D4P";
 			this->D4P->Size = System::Drawing::Size(46, 43);
 			this->D4P->TabIndex = 13;
@@ -905,7 +938,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->D3P->BackColor = System::Drawing::Color::Blue;
 			this->D3P->Controls->Add(this->D3T);
-			this->D3P->Location = System::Drawing::Point(179, 463);
+			this->D3P->Location = System::Drawing::Point(337, 99);
 			this->D3P->Name = L"D3P";
 			this->D3P->Size = System::Drawing::Size(46, 43);
 			this->D3P->TabIndex = 14;
@@ -926,7 +959,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->D2P->BackColor = System::Drawing::Color::Blue;
 			this->D2P->Controls->Add(this->D2T);
-			this->D2P->Location = System::Drawing::Point(127, 463);
+			this->D2P->Location = System::Drawing::Point(285, 99);
 			this->D2P->Name = L"D2P";
 			this->D2P->Size = System::Drawing::Size(46, 43);
 			this->D2P->TabIndex = 15;
@@ -947,7 +980,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->D1P->BackColor = System::Drawing::Color::Blue;
 			this->D1P->Controls->Add(this->D1T);
-			this->D1P->Location = System::Drawing::Point(74, 463);
+			this->D1P->Location = System::Drawing::Point(232, 99);
 			this->D1P->Name = L"D1P";
 			this->D1P->Size = System::Drawing::Size(46, 43);
 			this->D1P->TabIndex = 10;
@@ -968,7 +1001,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->EP->BackColor = System::Drawing::Color::BlueViolet;
 			this->EP->Controls->Add(this->ET);
-			this->EP->Location = System::Drawing::Point(337, 512);
+			this->EP->Location = System::Drawing::Point(232, 361);
 			this->EP->Name = L"EP";
 			this->EP->Size = System::Drawing::Size(153, 54);
 			this->EP->TabIndex = 16;
@@ -989,7 +1022,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->E6P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E6P->Controls->Add(this->E6T);
-			this->E6P->Location = System::Drawing::Point(444, 572);
+			this->E6P->Location = System::Drawing::Point(339, 421);
 			this->E6P->Name = L"E6P";
 			this->E6P->Size = System::Drawing::Size(46, 43);
 			this->E6P->TabIndex = 11;
@@ -1010,7 +1043,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->E5P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E5P->Controls->Add(this->E5T);
-			this->E5P->Location = System::Drawing::Point(390, 572);
+			this->E5P->Location = System::Drawing::Point(285, 421);
 			this->E5P->Name = L"E5P";
 			this->E5P->Size = System::Drawing::Size(46, 43);
 			this->E5P->TabIndex = 12;
@@ -1031,7 +1064,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->E4P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E4P->Controls->Add(this->E4T);
-			this->E4P->Location = System::Drawing::Point(338, 572);
+			this->E4P->Location = System::Drawing::Point(233, 421);
 			this->E4P->Name = L"E4P";
 			this->E4P->Size = System::Drawing::Size(46, 43);
 			this->E4P->TabIndex = 13;
@@ -1052,7 +1085,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->E3P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E3P->Controls->Add(this->E3T);
-			this->E3P->Location = System::Drawing::Point(442, 463);
+			this->E3P->Location = System::Drawing::Point(337, 312);
 			this->E3P->Name = L"E3P";
 			this->E3P->Size = System::Drawing::Size(46, 43);
 			this->E3P->TabIndex = 14;
@@ -1073,7 +1106,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->E2P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E2P->Controls->Add(this->E2T);
-			this->E2P->Location = System::Drawing::Point(390, 463);
+			this->E2P->Location = System::Drawing::Point(285, 312);
 			this->E2P->Name = L"E2P";
 			this->E2P->Size = System::Drawing::Size(46, 43);
 			this->E2P->TabIndex = 15;
@@ -1094,7 +1127,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->E1P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E1P->Controls->Add(this->E1T);
-			this->E1P->Location = System::Drawing::Point(337, 463);
+			this->E1P->Location = System::Drawing::Point(232, 312);
 			this->E1P->Name = L"E1P";
 			this->E1P->Size = System::Drawing::Size(46, 43);
 			this->E1P->TabIndex = 10;
@@ -1115,7 +1148,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->FP->BackColor = System::Drawing::Color::HotPink;
 			this->FP->Controls->Add(this->FT);
-			this->FP->Location = System::Drawing::Point(587, 512);
+			this->FP->Location = System::Drawing::Point(232, 584);
 			this->FP->Name = L"FP";
 			this->FP->Size = System::Drawing::Size(153, 54);
 			this->FP->TabIndex = 16;
@@ -1136,7 +1169,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->F6P->BackColor = System::Drawing::Color::HotPink;
 			this->F6P->Controls->Add(this->F6T);
-			this->F6P->Location = System::Drawing::Point(694, 572);
+			this->F6P->Location = System::Drawing::Point(339, 644);
 			this->F6P->Name = L"F6P";
 			this->F6P->Size = System::Drawing::Size(46, 43);
 			this->F6P->TabIndex = 11;
@@ -1157,7 +1190,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->F5P->BackColor = System::Drawing::Color::HotPink;
 			this->F5P->Controls->Add(this->F5T);
-			this->F5P->Location = System::Drawing::Point(640, 572);
+			this->F5P->Location = System::Drawing::Point(285, 644);
 			this->F5P->Name = L"F5P";
 			this->F5P->Size = System::Drawing::Size(46, 43);
 			this->F5P->TabIndex = 12;
@@ -1178,7 +1211,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->F4P->BackColor = System::Drawing::Color::HotPink;
 			this->F4P->Controls->Add(this->F4T);
-			this->F4P->Location = System::Drawing::Point(588, 572);
+			this->F4P->Location = System::Drawing::Point(233, 644);
 			this->F4P->Name = L"F4P";
 			this->F4P->Size = System::Drawing::Size(46, 43);
 			this->F4P->TabIndex = 13;
@@ -1199,7 +1232,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->F3P->BackColor = System::Drawing::Color::HotPink;
 			this->F3P->Controls->Add(this->F3T);
-			this->F3P->Location = System::Drawing::Point(692, 463);
+			this->F3P->Location = System::Drawing::Point(337, 535);
 			this->F3P->Name = L"F3P";
 			this->F3P->Size = System::Drawing::Size(46, 43);
 			this->F3P->TabIndex = 14;
@@ -1220,7 +1253,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->F2P->BackColor = System::Drawing::Color::HotPink;
 			this->F2P->Controls->Add(this->F2T);
-			this->F2P->Location = System::Drawing::Point(640, 463);
+			this->F2P->Location = System::Drawing::Point(285, 535);
 			this->F2P->Name = L"F2P";
 			this->F2P->Size = System::Drawing::Size(46, 43);
 			this->F2P->TabIndex = 15;
@@ -1241,7 +1274,7 @@ private: System::Windows::Forms::Button^  back;
 			// 
 			this->F1P->BackColor = System::Drawing::Color::HotPink;
 			this->F1P->Controls->Add(this->F1T);
-			this->F1P->Location = System::Drawing::Point(587, 463);
+			this->F1P->Location = System::Drawing::Point(232, 535);
 			this->F1P->Name = L"F1P";
 			this->F1P->Size = System::Drawing::Size(46, 43);
 			this->F1P->TabIndex = 10;
@@ -1270,11 +1303,167 @@ private: System::Windows::Forms::Button^  back;
 			this->back->UseVisualStyleBackColor = true;
 			this->back->Click += gcnew System::EventHandler(this, &Table::back_Click);
 			// 
+			// Chair1
+			// 
+			this->Chair1->AutoSize = true;
+			this->Chair1->Location = System::Drawing::Point(589, 214);
+			this->Chair1->Name = L"Chair1";
+			this->Chair1->Size = System::Drawing::Size(38, 21);
+			this->Chair1->TabIndex = 18;
+			this->Chair1->Text = L"1";
+			this->Chair1->UseVisualStyleBackColor = true;
+			// 
+			// Chair2
+			// 
+			this->Chair2->AutoSize = true;
+			this->Chair2->Location = System::Drawing::Point(589, 261);
+			this->Chair2->Name = L"Chair2";
+			this->Chair2->Size = System::Drawing::Size(38, 21);
+			this->Chair2->TabIndex = 19;
+			this->Chair2->Text = L"2";
+			this->Chair2->UseVisualStyleBackColor = true;
+			// 
+			// Chair4
+			// 
+			this->Chair4->AutoSize = true;
+			this->Chair4->Location = System::Drawing::Point(589, 359);
+			this->Chair4->Name = L"Chair4";
+			this->Chair4->Size = System::Drawing::Size(38, 21);
+			this->Chair4->TabIndex = 21;
+			this->Chair4->Text = L"4";
+			this->Chair4->UseVisualStyleBackColor = true;
+			// 
+			// Chair3
+			// 
+			this->Chair3->AutoSize = true;
+			this->Chair3->Location = System::Drawing::Point(589, 312);
+			this->Chair3->Name = L"Chair3";
+			this->Chair3->Size = System::Drawing::Size(38, 21);
+			this->Chair3->TabIndex = 20;
+			this->Chair3->Text = L"3";
+			this->Chair3->UseVisualStyleBackColor = true;
+			// 
+			// Chair6
+			// 
+			this->Chair6->AutoSize = true;
+			this->Chair6->Location = System::Drawing::Point(589, 458);
+			this->Chair6->Name = L"Chair6";
+			this->Chair6->Size = System::Drawing::Size(38, 21);
+			this->Chair6->TabIndex = 23;
+			this->Chair6->Text = L"6";
+			this->Chair6->UseVisualStyleBackColor = true;
+			// 
+			// Chair5
+			// 
+			this->Chair5->AutoSize = true;
+			this->Chair5->Location = System::Drawing::Point(589, 411);
+			this->Chair5->Name = L"Chair5";
+			this->Chair5->Size = System::Drawing::Size(38, 21);
+			this->Chair5->TabIndex = 22;
+			this->Chair5->Text = L"5";
+			this->Chair5->UseVisualStyleBackColor = true;
+			// 
+			// AllChair
+			// 
+			this->AllChair->AutoSize = true;
+			this->AllChair->Location = System::Drawing::Point(589, 509);
+			this->AllChair->Name = L"AllChair";
+			this->AllChair->Size = System::Drawing::Size(45, 21);
+			this->AllChair->TabIndex = 24;
+			this->AllChair->Text = L"All";
+			this->AllChair->UseVisualStyleBackColor = true;
+			// 
+			// Table_list
+			// 
+			this->Table_list->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->Table_list->FormattingEnabled = true;
+			this->Table_list->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"A", L"B", L"C", L"D", L"E", L"F" });
+			this->Table_list->Location = System::Drawing::Point(502, 214);
+			this->Table_list->Name = L"Table_list";
+			this->Table_list->Size = System::Drawing::Size(52, 24);
+			this->Table_list->TabIndex = 25;
+			this->Table_list->SelectedIndexChanged += gcnew System::EventHandler(this, &Table::comboBox1_SelectedIndexChanged);
+			// 
+			// ID1
+			// 
+			this->ID1->Location = System::Drawing::Point(651, 216);
+			this->ID1->MaxLength = 9;
+			this->ID1->Name = L"ID1";
+			this->ID1->Size = System::Drawing::Size(108, 22);
+			this->ID1->TabIndex = 26;
+			// 
+			// ID2
+			// 
+			this->ID2->Location = System::Drawing::Point(651, 262);
+			this->ID2->MaxLength = 9;
+			this->ID2->Name = L"ID2";
+			this->ID2->Size = System::Drawing::Size(108, 22);
+			this->ID2->TabIndex = 27;
+			// 
+			// ID4
+			// 
+			this->ID4->Location = System::Drawing::Point(651, 364);
+			this->ID4->MaxLength = 9;
+			this->ID4->Name = L"ID4";
+			this->ID4->Size = System::Drawing::Size(108, 22);
+			this->ID4->TabIndex = 29;
+			// 
+			// ID3
+			// 
+			this->ID3->Location = System::Drawing::Point(651, 318);
+			this->ID3->MaxLength = 9;
+			this->ID3->Name = L"ID3";
+			this->ID3->Size = System::Drawing::Size(108, 22);
+			this->ID3->TabIndex = 28;
+			// 
+			// ID6
+			// 
+			this->ID6->Location = System::Drawing::Point(651, 457);
+			this->ID6->MaxLength = 9;
+			this->ID6->Name = L"ID6";
+			this->ID6->Size = System::Drawing::Size(108, 22);
+			this->ID6->TabIndex = 31;
+			// 
+			// ID5
+			// 
+			this->ID5->Location = System::Drawing::Point(651, 411);
+			this->ID5->MaxLength = 9;
+			this->ID5->Name = L"ID5";
+			this->ID5->Size = System::Drawing::Size(108, 22);
+			this->ID5->TabIndex = 30;
+			// 
+			// Confirm_Book
+			// 
+			this->Confirm_Book->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->Confirm_Book->Location = System::Drawing::Point(608, 587);
+			this->Confirm_Book->Name = L"Confirm_Book";
+			this->Confirm_Book->Size = System::Drawing::Size(151, 47);
+			this->Confirm_Book->TabIndex = 32;
+			this->Confirm_Book->Text = L"Confirm";
+			this->Confirm_Book->UseVisualStyleBackColor = true;
+			this->Confirm_Book->Click += gcnew System::EventHandler(this, &Table::Confirm_Book_Click);
+			// 
 			// Table
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(820, 754);
+			this->Controls->Add(this->Confirm_Book);
+			this->Controls->Add(this->ID6);
+			this->Controls->Add(this->ID5);
+			this->Controls->Add(this->ID4);
+			this->Controls->Add(this->ID3);
+			this->Controls->Add(this->ID2);
+			this->Controls->Add(this->ID1);
+			this->Controls->Add(this->Table_list);
+			this->Controls->Add(this->AllChair);
+			this->Controls->Add(this->Chair6);
+			this->Controls->Add(this->Chair5);
+			this->Controls->Add(this->Chair4);
+			this->Controls->Add(this->Chair3);
+			this->Controls->Add(this->Chair2);
+			this->Controls->Add(this->Chair1);
 			this->Controls->Add(this->back);
 			this->Controls->Add(this->FP);
 			this->Controls->Add(this->EP);
@@ -1407,13 +1596,13 @@ private: System::Windows::Forms::Button^  back;
 			this->F1P->ResumeLayout(false);
 			this->F1P->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void Table_Load(System::Object^  sender, System::EventArgs^  e) {
 		SeatApi s;
 		auto arr_Chair = gcnew cli::array<System::Windows::Forms::Panel^>(36);
-		auto arr_Chair_T= gcnew cli::array<System::Windows::Forms::Label^>(36);
 		arr_Chair[0] = A1P;
 		arr_Chair[1] = A2P;
 		arr_Chair[2] = A3P;
@@ -1450,47 +1639,10 @@ private: System::Windows::Forms::Button^  back;
 		arr_Chair[33] = F4P;
 		arr_Chair[34] = F5P;
 		arr_Chair[35] = F6P;
-		arr_Chair_T[0] = A1T;
-		arr_Chair_T[1] = A2T;
-		arr_Chair_T[2] = A3T;
-		arr_Chair_T[3] = A4T;
-		arr_Chair_T[4] = A5T;
-		arr_Chair_T[5] = A6T;
-		arr_Chair_T[6] = B1T;
-		arr_Chair_T[7] = B2T;
-		arr_Chair_T[8] = B3T;
-		arr_Chair_T[9] = B4T;
-		arr_Chair_T[10] = B5T;
-		arr_Chair_T[11] = B6T;
-		arr_Chair_T[12] = C1T;
-		arr_Chair_T[13] = C2T;
-		arr_Chair_T[14] = C3T;
-		arr_Chair_T[15] = C4T;
-		arr_Chair_T[16] = C5T;
-		arr_Chair_T[17] = C6T;
-		arr_Chair_T[18] = D1T;
-		arr_Chair_T[19] = D2T;
-		arr_Chair_T[20] = D3T;
-		arr_Chair_T[21] = D4T;
-		arr_Chair_T[22] = D5T;
-		arr_Chair_T[23] = D6T;
-		arr_Chair_T[24] = E1T;
-		arr_Chair_T[25] = E2T;
-		arr_Chair_T[26] = E3T;
-		arr_Chair_T[27] = E4T;
-		arr_Chair_T[28] = E5T;
-		arr_Chair_T[29] = E6T;
-		arr_Chair_T[30] = F1T;
-		arr_Chair_T[31] = F2T;
-		arr_Chair_T[32] = F3T;
-		arr_Chair_T[33] = F4T;
-		arr_Chair_T[34] = F5T;
-		arr_Chair_T[35] = F6T;
 		for (int i = 0; i < 6; i++) {
 			for(int j = 0; j < 6; j++){
 				if (!s.check_seat(i, j)) {
-					arr_Chair[(j*6)+i]->BackColor = System::Drawing::Color::Red;
-					arr_Chair_T[(j * 6) + i]->Enabled = false;
+					arr_Chair[(i*6)+j]->BackColor = System::Drawing::Color::Red;
 				}
 			}
 		}
@@ -1498,70 +1650,76 @@ private: System::Windows::Forms::Button^  back;
 private: System::Void back_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();
 }
-private: System::Void A1T_Click(System::Object^  sender, System::EventArgs^  e) {
-	A1P->BackColor= System::Drawing::Color::Orange;
+private: System::Void Confirm_Book_Click(System::Object^  sender, System::EventArgs^  e) {
+	SeatApi seat;
+	DatabaseApi s;
+	auto Chair = gcnew cli::array<System::Windows::Forms::CheckBox^>(7);
+	Chair[0] =  Chair1;
+	Chair[1] = Chair2;
+	Chair[2] = Chair3;
+	Chair[3] = Chair4;
+	Chair[4] = Chair5;
+	Chair[5] = Chair6;
+	Chair[6] = AllChair;
+	vector <int> chair_index;
+	for (int i = 0; i < 6; i++) {
+		if (Chair[6]->Checked) {
+			for (int j = 0; j < 6; j++) {
+				Chair[j]->Checked = true;
+			}
+		}
+		else if (Chair[i]->Checked) {
+			chair_index.push_back(i);
+			}
+		}
+	auto id_student = gcnew cli::array<System::Windows::Forms::TextBox^>(6);
+	id_student[0] = ID1;
+	id_student[1] = ID2;
+	id_student[2] = ID3;
+	id_student[3] = ID4;
+	id_student[4] = ID5;
+	id_student[5] = ID6;
+	int id_convert[6];
+	int sum_number_id = 0;
+	int sum_number_id_canbook = 0;
+	vector <int>id_canbook;
+	for (int i = 0; i < 6; i++) {
+		if (id_student[i]->Text != "") {
+			id_convert[i] = Convert::ToInt32(id_student[i]->Text);
+			sum_number_id++;
+			if (s.book_yet(id_convert[i])==2) {
+				sum_number_id_canbook++;
+				id_canbook.push_back(s.id_confirm);
+			}
+			else if(s.book_yet(id_convert[i]) == 1) {
+				continue;
+			}
+		}
+	}
+	int full_chair = 0;
+	for(int j=0;j< chair_index.size();j++){
+		if (!seat.check_seat(Table_list->SelectedIndex, chair_index[j])) {
+			full_chair++;
+		}
+	}
+	if (sum_number_id == 0  || chair_index.size()==0 || Table_list->SelectedIndex==-1 ||full_chair>0) {
+		MessageBox::Show("Please your information");
+	}
+	else if(sum_number_id == sum_number_id_canbook){
+		
+		for (int i = 0; i < id_canbook.size(); i++) {
+			s.set_book(id_canbook[i]);
+		}
+		seat.confirm_book(Table_list->SelectedIndex, chair_index);
+		MessageBox::Show("completed");
+		this->Hide();
+	}
+	else {
+		MessageBox::Show("Booked");
+	}
+	
 }
-
-private: System::Void A2T_Click(System::Object^  sender, System::EventArgs^  e) {
-	A2P->BackColor = System::Drawing::Color::Orange;
-}
-private: System::Void A1T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
-	A1P->BackColor = System::Drawing::Color::Gold;
-}
-private: System::Void A2T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
-	A2P->BackColor = System::Drawing::Color::Gold;
-}
-private: System::Void A3T_Click(System::Object^  sender, System::EventArgs^  e) {
-	A3P->BackColor = System::Drawing::Color::Orange;
-}
-private: System::Void AT_Click(System::Object^  sender, System::EventArgs^  e) {
-	AP->BackColor = System::Drawing::Color::Orange;
-	A1P->BackColor = System::Drawing::Color::Orange;
-	A2P->BackColor = System::Drawing::Color::Orange;
-	A3P->BackColor = System::Drawing::Color::Orange;
-	A4P->BackColor = System::Drawing::Color::Orange;
-	A5P->BackColor = System::Drawing::Color::Orange;
-	A6P->BackColor = System::Drawing::Color::Orange;
-}
-private: System::Void A4T_Click(System::Object^  sender, System::EventArgs^  e) {
-	A4P->BackColor = System::Drawing::Color::Orange;
-}
-private: System::Void A5T_Click(System::Object^  sender, System::EventArgs^  e) {
-	A5P->BackColor = System::Drawing::Color::Orange;
-}
-private: System::Void A6T_Click(System::Object^  sender, System::EventArgs^  e) {
-	A6P->BackColor = System::Drawing::Color::Orange;
-}
-private: System::Void A3T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
-	A3P->BackColor = System::Drawing::Color::Gold;
-}
-private: System::Void A4T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
-	A4P->BackColor = System::Drawing::Color::Gold;
-}
-private: System::Void A5T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
-	A5P->BackColor = System::Drawing::Color::Gold;
-}
-private: System::Void A6T_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
-	A6P->BackColor = System::Drawing::Color::Gold;
-}
-private: System::Void AP_Click(System::Object^  sender, System::EventArgs^  e) {
-	AP->BackColor = System::Drawing::Color::Gold;
-	A1P->BackColor = System::Drawing::Color::Gold;
-	A2P->BackColor = System::Drawing::Color::Gold;
-	A3P->BackColor = System::Drawing::Color::Gold;
-	A4P->BackColor = System::Drawing::Color::Gold;
-	A5P->BackColor = System::Drawing::Color::Gold;
-	A6P->BackColor = System::Drawing::Color::Gold;
-}
-private: System::Void AP_DoubleClick(System::Object^  sender, System::EventArgs^  e) {
-	AP->BackColor = System::Drawing::Color::Orange;
-	A1P->BackColor = System::Drawing::Color::Orange;
-	A2P->BackColor = System::Drawing::Color::Orange;
-	A3P->BackColor = System::Drawing::Color::Orange;
-	A4P->BackColor = System::Drawing::Color::Orange;
-	A5P->BackColor = System::Drawing::Color::Orange;
-	A6P->BackColor = System::Drawing::Color::Orange;
-
+private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

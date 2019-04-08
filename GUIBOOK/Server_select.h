@@ -72,6 +72,7 @@ namespace GUIBOOK {
 	private: System::Windows::Forms::Panel^  Hor4P;
 	private: System::Windows::Forms::Panel^  Hor5P;
 	private: System::Windows::Forms::Panel^  Hor6P;
+	private: System::Windows::Forms::Button^  Refresh;
 	protected:
 
 	protected:
@@ -116,6 +117,7 @@ namespace GUIBOOK {
 			this->Hor4P = (gcnew System::Windows::Forms::Panel());
 			this->Hor5P = (gcnew System::Windows::Forms::Panel());
 			this->Hor6P = (gcnew System::Windows::Forms::Panel());
+			this->Refresh = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->Hor1P->SuspendLayout();
 			this->Hor2P->SuspendLayout();
@@ -301,7 +303,7 @@ namespace GUIBOOK {
 			// 
 			this->Confirmtime->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->Confirmtime->Location = System::Drawing::Point(357, 170);
+			this->Confirmtime->Location = System::Drawing::Point(310, 177);
 			this->Confirmtime->Name = L"Confirmtime";
 			this->Confirmtime->Size = System::Drawing::Size(125, 37);
 			this->Confirmtime->TabIndex = 31;
@@ -428,12 +430,25 @@ namespace GUIBOOK {
 			this->Hor6P->Visible = false;
 			this->Hor6P->Click += gcnew System::EventHandler(this, &Server_select::Hor6P_Click);
 			// 
+			// Refresh
+			// 
+			this->Refresh->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->Refresh->Location = System::Drawing::Point(458, 177);
+			this->Refresh->Name = L"Refresh";
+			this->Refresh->Size = System::Drawing::Size(122, 37);
+			this->Refresh->TabIndex = 42;
+			this->Refresh->Text = L"Refresh";
+			this->Refresh->UseVisualStyleBackColor = true;
+			this->Refresh->Click += gcnew System::EventHandler(this, &Server_select::Refresh_Click);
+			// 
 			// Server_select
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(838, 801);
+			this->Controls->Add(this->Refresh);
 			this->Controls->Add(this->Hor6P);
 			this->Controls->Add(this->Hor5P);
 			this->Controls->Add(this->Hor4P);
@@ -500,33 +515,40 @@ namespace GUIBOOK {
 		arr_HorP[3] = Hor4P;
 		arr_HorP[4] = Hor5P;
 		arr_HorP[5] = Hor6P;
-
 		String ^ start = Start_T->Text;
 		String ^ end = End_T->Text;
-		int start_convert = Convert::ToInt32(start);
-		int end_convert = Convert::ToInt32(end);
-		SeatApi s(start_convert, end_convert);
-		string *temp = s.get_hor();
-		for (int i = 0; i < 6; i++) {
-			arr_hor[i]->Visible = true;
-			arr_N[i]->Visible = true;
-			arr_HorP[i]->Visible = true;
-			arr_hor[i]->Text = gcnew String(temp[i].c_str());
-			arr_N[i]->Text = Convert::ToString(s.empty_seat[i]);
-			if (s.empty_seat[i] > 27 && s.empty_seat[i] <= 36) {
-				arr_HorP[i]->BackColor = System::Drawing::Color::Lime;
-			}
-			else if (s.empty_seat[i] >= 18 && s.empty_seat[i] <= 27) {
-				arr_HorP[i]->BackColor = System::Drawing::Color::Yellow;
-			}
-			else if (s.empty_seat[i] >= 9 && s.empty_seat[i] < 18) {
-				arr_HorP[i]->BackColor	= System::Drawing::Color::OrangeRed;
-			}
-			else if (s.empty_seat[i] >= 0 && s.empty_seat[i] < 9) {
-				arr_HorP[i]->BackColor = System::Drawing::Color::Red;
+		if (start != "" && end!="") {
+			int start_convert = Convert::ToInt32(start);
+			int end_convert = Convert::ToInt32(end);
+			SeatApi s(start_convert, end_convert);
+			string *temp = s.get_hor();
+			if (end_convert-start_convert>0 && start_convert>=0 && start_convert<24 && end_convert >= 0 && end_convert < 24 ) {
+				for (int i = 0; i < 6; i++) {
+					arr_hor[i]->Visible = true;
+					arr_N[i]->Visible = true;
+					arr_HorP[i]->Visible = true;
+					arr_hor[i]->Text = gcnew String(temp[i].c_str());
+					arr_N[i]->Text = Convert::ToString(s.empty_seat[i]);
+					if (s.empty_seat[i] > 27 && s.empty_seat[i] <= 36) {
+						arr_HorP[i]->BackColor = System::Drawing::Color::Lime;
+					}
+					else if (s.empty_seat[i] >= 18 && s.empty_seat[i] <= 27) {
+						arr_HorP[i]->BackColor = System::Drawing::Color::Yellow;
+					}
+					else if (s.empty_seat[i] >= 9 && s.empty_seat[i] < 18) {
+						arr_HorP[i]->BackColor = System::Drawing::Color::OrangeRed;
+					}
+					else if (s.empty_seat[i] >= 0 && s.empty_seat[i] < 9) {
+						arr_HorP[i]->BackColor = System::Drawing::Color::Red;
+					}
+				}
+			}else{
+				MessageBox::Show("Please Add time Again"); 
 			}
 		}
-
+		else {
+			MessageBox::Show("Please Add time");
+		}
 
 	}
 
@@ -576,6 +598,54 @@ private: System::Void Hor6P_Click(System::Object^  sender, System::EventArgs^  e
 }
 private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();
+}
+private: System::Void Refresh_Click(System::Object^  sender, System::EventArgs^  e) {
+	auto arr_hor = gcnew cli::array<System::Windows::Forms::Label^>(6);
+	auto arr_N = gcnew cli::array<System::Windows::Forms::Label^>(6);
+	auto arr_HorP = gcnew cli::array<System::Windows::Forms::Panel^>(6);
+	arr_hor[0] = hor1;
+	arr_hor[1] = hor2;
+	arr_hor[2] = hor3;
+	arr_hor[3] = hor4;
+	arr_hor[4] = hor5;
+	arr_hor[5] = hor6;
+	arr_N[0] = N1;
+	arr_N[1] = N2;
+	arr_N[2] = N3;
+	arr_N[3] = N4;
+	arr_N[4] = N5;
+	arr_N[5] = N6;
+	arr_HorP[0] = Hor1P;
+	arr_HorP[1] = Hor2P;
+	arr_HorP[2] = Hor3P;
+	arr_HorP[3] = Hor4P;
+	arr_HorP[4] = Hor5P;
+	arr_HorP[5] = Hor6P;
+	String ^ start = Start_T->Text;
+	String ^ end = End_T->Text;
+	int start_convert = Convert::ToInt32(start);
+	int end_convert = Convert::ToInt32(end);
+	SeatApi s(start_convert, end_convert);
+	string *temp = s.get_hor();
+	for (int i = 0; i < 6; i++) {
+		arr_hor[i]->Visible = true;
+		arr_N[i]->Visible = true;
+		arr_HorP[i]->Visible = true;
+		arr_hor[i]->Text = gcnew String(temp[i].c_str());
+		arr_N[i]->Text = Convert::ToString(s.empty_seat[i]);
+		if (s.empty_seat[i] > 27 && s.empty_seat[i] <= 36) {
+			arr_HorP[i]->BackColor = System::Drawing::Color::Lime;
+		}
+		else if (s.empty_seat[i] >= 18 && s.empty_seat[i] <= 27) {
+			arr_HorP[i]->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if (s.empty_seat[i] >= 9 && s.empty_seat[i] < 18) {
+			arr_HorP[i]->BackColor = System::Drawing::Color::OrangeRed;
+		}
+		else if (s.empty_seat[i] >= 0 && s.empty_seat[i] < 9) {
+			arr_HorP[i]->BackColor = System::Drawing::Color::Red;
+		}
+	}
 }
 };
 }
