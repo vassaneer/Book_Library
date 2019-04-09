@@ -342,10 +342,7 @@ namespace GUIBOOK {
 	private: System::Void Register_ID_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
-
-
-
-
+		this->Hide();
 	}
 	private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
