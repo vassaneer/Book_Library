@@ -1,6 +1,7 @@
 ﻿  MyForm.cpp
   Register_ID.cpp
   Server_select.cpp
+  Table.cpp
   Generating Code...
   data_include.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  GUIBOOK.vcxproj -> C:\Users\ASUS\Desktop\Project\Book_Library\x64\Debug\GUIBOOK.exe
+  GUIBOOK.vcxproj -> C:\Users\Win 8.1\source\Project repo\Book_Library\x64\Debug\GUIBOOK.exe

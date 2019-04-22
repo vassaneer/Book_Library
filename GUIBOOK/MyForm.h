@@ -92,12 +92,11 @@ namespace GUIBOOK {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"EDMuzazhi", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(435, 156);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(257, 122);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(393, 69);
+			this->label1->Size = System::Drawing::Size(317, 57);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Arn-Sue-Gun";
 			// 
@@ -106,22 +105,20 @@ namespace GUIBOOK {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(25, 43);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(54, 36);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(148, 29);
+			this->label2->Size = System::Drawing::Size(90, 24);
 			this->label2->TabIndex = 1;
-			this->label2->Text = L"Student ID :";
+			this->label2->Text = L"User ID :";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(44, 85);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(32, 70);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(142, 29);
+			this->label3->Size = System::Drawing::Size(112, 24);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Password :";
 			// 
@@ -129,11 +126,10 @@ namespace GUIBOOK {
 			// 
 			this->IDbox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->IDbox->Location = System::Drawing::Point(200, 44);
-			this->IDbox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->IDbox->Location = System::Drawing::Point(150, 36);
 			this->IDbox->MaxLength = 9;
 			this->IDbox->Name = L"IDbox";
-			this->IDbox->Size = System::Drawing::Size(132, 26);
+			this->IDbox->Size = System::Drawing::Size(100, 22);
 			this->IDbox->TabIndex = 3;
 			this->IDbox->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->IDbox->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
@@ -142,11 +138,10 @@ namespace GUIBOOK {
 			// 
 			this->Passwordbox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Passwordbox->Location = System::Drawing::Point(200, 86);
-			this->Passwordbox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Passwordbox->Location = System::Drawing::Point(150, 70);
 			this->Passwordbox->MaxLength = 20;
 			this->Passwordbox->Name = L"Passwordbox";
-			this->Passwordbox->Size = System::Drawing::Size(132, 26);
+			this->Passwordbox->Size = System::Drawing::Size(100, 22);
 			this->Passwordbox->TabIndex = 4;
 			this->Passwordbox->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->Passwordbox->UseSystemPasswordChar = true;
@@ -156,10 +151,9 @@ namespace GUIBOOK {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(73, 143);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Location = System::Drawing::Point(55, 116);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(119, 41);
+			this->button1->Size = System::Drawing::Size(89, 33);
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"Register";
 			this->button1->UseVisualStyleBackColor = true;
@@ -170,10 +164,9 @@ namespace GUIBOOK {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(215, 143);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Location = System::Drawing::Point(161, 116);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(119, 41);
+			this->button2->Size = System::Drawing::Size(89, 33);
 			this->button2->TabIndex = 6;
 			this->button2->Text = L"Login";
 			this->button2->UseVisualStyleBackColor = true;
@@ -189,11 +182,9 @@ namespace GUIBOOK {
 			this->groupBox1->Controls->Add(this->label3);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox1->Location = System::Drawing::Point(243, 274);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Location = System::Drawing::Point(182, 223);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox1->Size = System::Drawing::Size(379, 209);
+			this->groupBox1->Size = System::Drawing::Size(284, 170);
 			this->groupBox1->TabIndex = 7;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Sigh in";
@@ -202,10 +193,9 @@ namespace GUIBOOK {
 			// 
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(609, 1);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox2->Location = System::Drawing::Point(457, 1);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(212, 111);
+			this->pictureBox2->Size = System::Drawing::Size(159, 90);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox2->TabIndex = 9;
 			this->pictureBox2->TabStop = false;
@@ -213,19 +203,17 @@ namespace GUIBOOK {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label4->Location = System::Drawing::Point(571, 725);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Font = (gcnew System::Drawing::Font(L"Anchan", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(417, 584);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(277, 31);
+			this->label4->Size = System::Drawing::Size(188, 32);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Arn-Sue-Gun V.beta";
 			// 
 			// monthCalendar1
 			// 
-			this->monthCalendar1->Location = System::Drawing::Point(24, 516);
-			this->monthCalendar1->Margin = System::Windows::Forms::Padding(12, 11, 12, 11);
+			this->monthCalendar1->Location = System::Drawing::Point(18, 419);
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 11;
 			this->monthCalendar1->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MyForm::monthCalendar1_DateChanged);
@@ -236,10 +224,9 @@ namespace GUIBOOK {
 				static_cast<System::Byte>(222)));
 			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button3->Location = System::Drawing::Point(383, 516);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Location = System::Drawing::Point(287, 419);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(116, 38);
+			this->button3->Size = System::Drawing::Size(87, 31);
 			this->button3->TabIndex = 12;
 			this->button3->Text = L"Exit";
 			this->button3->UseVisualStyleBackColor = true;
@@ -247,20 +234,21 @@ namespace GUIBOOK {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(820, 754);
+			this->ClientSize = System::Drawing::Size(617, 625);
+			this->ControlBox = false;
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->monthCalendar1);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(838, 801);
-			this->MinimumSize = System::Drawing::Size(838, 801);
+			this->MaximumSize = System::Drawing::Size(617, 625);
+			this->MinimumSize = System::Drawing::Size(617, 625);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"[ASN]ArnSueGun";

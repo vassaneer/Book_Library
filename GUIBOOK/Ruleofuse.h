@@ -35,12 +35,13 @@ namespace GUIBOOK {
 			}
 		}
 	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::Label^  label4;
+
+
+
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::RichTextBox^  richTextBox1;
 	protected:
 
 	protected:
@@ -60,12 +61,10 @@ namespace GUIBOOK {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Ruleofuse::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -74,51 +73,18 @@ namespace GUIBOOK {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"EDMuzazhi", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->label1->Location = System::Drawing::Point(202, 53);
+			this->label1->Location = System::Drawing::Point(202, 34);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(403, 42);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L":::::::: Rules of Use ::::::::";
 			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"EDMuzazhi", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label2->Location = System::Drawing::Point(180, 119);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(437, 32);
-			this->label2->TabIndex = 1;
-			this->label2->Text = L"1.Can use up to 3 hours per day.";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"EDMuzazhi", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label3->Location = System::Drawing::Point(180, 185);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(227, 32);
-			this->label3->TabIndex = 2;
-			this->label3->Text = L"2.Read 1.  repeat";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"EDMuzazhi", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label4->Location = System::Drawing::Point(180, 261);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(180, 32);
-			this->label4->TabIndex = 3;
-			this->label4->Text = L"3.That is all.";
-			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(252, 306);
+			this->pictureBox1->Location = System::Drawing::Point(317, 388);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(353, 280);
+			this->pictureBox1->Size = System::Drawing::Size(213, 154);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 4;
 			this->pictureBox1->TabStop = false;
@@ -140,7 +106,7 @@ namespace GUIBOOK {
 				static_cast<System::Byte>(222)));
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button1->Location = System::Drawing::Point(12, 576);
+			this->button1->Location = System::Drawing::Point(31, 553);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(72, 33);
 			this->button1->TabIndex = 12;
@@ -149,22 +115,33 @@ namespace GUIBOOK {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Ruleofuse::button1_Click);
 			// 
+			// richTextBox1
+			// 
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Anchan", 14.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->richTextBox1->Location = System::Drawing::Point(209, 89);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->Size = System::Drawing::Size(394, 278);
+			this->richTextBox1->TabIndex = 13;
+			this->richTextBox1->Text = L"1.)Can use up to 3 hours per day.\n2.)Silence to be maintained.\n3.)Using Mobile ph"
+				L"ones and audio instruments with or without speaker or headphone is strictly proh"
+				L"ibited in the room premises.\n\n\n";
+			// 
 			// Ruleofuse
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(617, 621);
+			this->ClientSize = System::Drawing::Size(617, 625);
+			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label5);
-			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(633, 660);
-			this->MinimumSize = System::Drawing::Size(633, 660);
+			this->MaximumSize = System::Drawing::Size(617, 625);
+			this->MinimumSize = System::Drawing::Size(617, 625);
 			this->Name = L"Ruleofuse";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Ruleofuse";
