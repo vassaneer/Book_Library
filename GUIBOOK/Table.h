@@ -246,6 +246,7 @@ private: System::Windows::Forms::TextBox^  ID6;
 
 private: System::Windows::Forms::TextBox^  ID5;
 private: System::Windows::Forms::Button^  Confirm_Book;
+private: System::Windows::Forms::Label^  label1;
 
 
 
@@ -265,6 +266,7 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Table::typeid));
 			this->A1P = (gcnew System::Windows::Forms::Panel());
 			this->A1T = (gcnew System::Windows::Forms::Label());
 			this->A2P = (gcnew System::Windows::Forms::Panel());
@@ -365,6 +367,7 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->ID6 = (gcnew System::Windows::Forms::TextBox());
 			this->ID5 = (gcnew System::Windows::Forms::TextBox());
 			this->Confirm_Book = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->A1P->SuspendLayout();
 			this->A2P->SuspendLayout();
 			this->A3P->SuspendLayout();
@@ -413,9 +416,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->A1P->BackColor = System::Drawing::Color::Gold;
 			this->A1P->Controls->Add(this->A1T);
-			this->A1P->Location = System::Drawing::Point(39, 99);
+			this->A1P->Location = System::Drawing::Point(29, 80);
+			this->A1P->Margin = System::Windows::Forms::Padding(2);
 			this->A1P->Name = L"A1P";
-			this->A1P->Size = System::Drawing::Size(46, 43);
+			this->A1P->Size = System::Drawing::Size(34, 35);
 			this->A1P->TabIndex = 0;
 			// 
 			// A1T
@@ -424,9 +428,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->A1T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->A1T->ForeColor = System::Drawing::SystemColors::Control;
-			this->A1T->Location = System::Drawing::Point(4, 6);
+			this->A1T->Location = System::Drawing::Point(3, 5);
+			this->A1T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->A1T->Name = L"A1T";
-			this->A1T->Size = System::Drawing::Size(43, 29);
+			this->A1T->Size = System::Drawing::Size(35, 24);
 			this->A1T->TabIndex = 0;
 			this->A1T->Text = L"A1";
 			// 
@@ -434,9 +439,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->A2P->BackColor = System::Drawing::Color::Gold;
 			this->A2P->Controls->Add(this->A2T);
-			this->A2P->Location = System::Drawing::Point(92, 99);
+			this->A2P->Location = System::Drawing::Point(69, 80);
+			this->A2P->Margin = System::Windows::Forms::Padding(2);
 			this->A2P->Name = L"A2P";
-			this->A2P->Size = System::Drawing::Size(46, 43);
+			this->A2P->Size = System::Drawing::Size(34, 35);
 			this->A2P->TabIndex = 1;
 			// 
 			// A2T
@@ -445,9 +451,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->A2T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->A2T->ForeColor = System::Drawing::SystemColors::Control;
-			this->A2T->Location = System::Drawing::Point(4, 6);
+			this->A2T->Location = System::Drawing::Point(3, 5);
+			this->A2T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->A2T->Name = L"A2T";
-			this->A2T->Size = System::Drawing::Size(43, 29);
+			this->A2T->Size = System::Drawing::Size(35, 24);
 			this->A2T->TabIndex = 0;
 			this->A2T->Text = L"A2";
 			// 
@@ -455,9 +462,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->A3P->BackColor = System::Drawing::Color::Gold;
 			this->A3P->Controls->Add(this->A3T);
-			this->A3P->Location = System::Drawing::Point(144, 99);
+			this->A3P->Location = System::Drawing::Point(108, 80);
+			this->A3P->Margin = System::Windows::Forms::Padding(2);
 			this->A3P->Name = L"A3P";
-			this->A3P->Size = System::Drawing::Size(46, 43);
+			this->A3P->Size = System::Drawing::Size(34, 35);
 			this->A3P->TabIndex = 1;
 			// 
 			// A3T
@@ -466,9 +474,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->A3T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->A3T->ForeColor = System::Drawing::SystemColors::Control;
-			this->A3T->Location = System::Drawing::Point(4, 6);
+			this->A3T->Location = System::Drawing::Point(3, 5);
+			this->A3T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->A3T->Name = L"A3T";
-			this->A3T->Size = System::Drawing::Size(43, 29);
+			this->A3T->Size = System::Drawing::Size(35, 24);
 			this->A3T->TabIndex = 0;
 			this->A3T->Text = L"A3";
 			// 
@@ -476,9 +485,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->A4P->BackColor = System::Drawing::Color::Gold;
 			this->A4P->Controls->Add(this->A4T);
-			this->A4P->Location = System::Drawing::Point(40, 208);
+			this->A4P->Location = System::Drawing::Point(30, 169);
+			this->A4P->Margin = System::Windows::Forms::Padding(2);
 			this->A4P->Name = L"A4P";
-			this->A4P->Size = System::Drawing::Size(46, 43);
+			this->A4P->Size = System::Drawing::Size(34, 35);
 			this->A4P->TabIndex = 1;
 			// 
 			// A4T
@@ -487,9 +497,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->A4T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->A4T->ForeColor = System::Drawing::SystemColors::Control;
-			this->A4T->Location = System::Drawing::Point(4, 6);
+			this->A4T->Location = System::Drawing::Point(3, 5);
+			this->A4T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->A4T->Name = L"A4T";
-			this->A4T->Size = System::Drawing::Size(43, 29);
+			this->A4T->Size = System::Drawing::Size(35, 24);
 			this->A4T->TabIndex = 0;
 			this->A4T->Text = L"A4";
 			// 
@@ -497,9 +508,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->A5P->BackColor = System::Drawing::Color::Gold;
 			this->A5P->Controls->Add(this->A5T);
-			this->A5P->Location = System::Drawing::Point(92, 208);
+			this->A5P->Location = System::Drawing::Point(69, 169);
+			this->A5P->Margin = System::Windows::Forms::Padding(2);
 			this->A5P->Name = L"A5P";
-			this->A5P->Size = System::Drawing::Size(46, 43);
+			this->A5P->Size = System::Drawing::Size(34, 35);
 			this->A5P->TabIndex = 1;
 			// 
 			// A5T
@@ -508,9 +520,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->A5T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->A5T->ForeColor = System::Drawing::SystemColors::Control;
-			this->A5T->Location = System::Drawing::Point(4, 6);
+			this->A5T->Location = System::Drawing::Point(3, 5);
+			this->A5T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->A5T->Name = L"A5T";
-			this->A5T->Size = System::Drawing::Size(43, 29);
+			this->A5T->Size = System::Drawing::Size(35, 24);
 			this->A5T->TabIndex = 0;
 			this->A5T->Text = L"A5";
 			// 
@@ -518,9 +531,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->A6P->BackColor = System::Drawing::Color::Gold;
 			this->A6P->Controls->Add(this->A6T);
-			this->A6P->Location = System::Drawing::Point(146, 208);
+			this->A6P->Location = System::Drawing::Point(110, 169);
+			this->A6P->Margin = System::Windows::Forms::Padding(2);
 			this->A6P->Name = L"A6P";
-			this->A6P->Size = System::Drawing::Size(46, 43);
+			this->A6P->Size = System::Drawing::Size(34, 35);
 			this->A6P->TabIndex = 1;
 			// 
 			// A6T
@@ -529,9 +543,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->A6T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->A6T->ForeColor = System::Drawing::SystemColors::Control;
-			this->A6T->Location = System::Drawing::Point(4, 6);
+			this->A6T->Location = System::Drawing::Point(3, 5);
+			this->A6T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->A6T->Name = L"A6T";
-			this->A6T->Size = System::Drawing::Size(43, 29);
+			this->A6T->Size = System::Drawing::Size(35, 24);
 			this->A6T->TabIndex = 0;
 			this->A6T->Text = L"A6";
 			// 
@@ -539,9 +554,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->AP->BackColor = System::Drawing::Color::Gold;
 			this->AP->Controls->Add(this->AT);
-			this->AP->Location = System::Drawing::Point(39, 148);
+			this->AP->Location = System::Drawing::Point(29, 120);
+			this->AP->Margin = System::Windows::Forms::Padding(2);
 			this->AP->Name = L"AP";
-			this->AP->Size = System::Drawing::Size(153, 54);
+			this->AP->Size = System::Drawing::Size(115, 44);
 			this->AP->TabIndex = 2;
 			// 
 			// AT
@@ -550,9 +566,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->AT->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->AT->ForeColor = System::Drawing::SystemColors::Control;
-			this->AT->Location = System::Drawing::Point(57, 8);
+			this->AT->Location = System::Drawing::Point(43, 6);
+			this->AT->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->AT->Name = L"AT";
-			this->AT->Size = System::Drawing::Size(37, 36);
+			this->AT->Size = System::Drawing::Size(29, 29);
 			this->AT->TabIndex = 1;
 			this->AT->Text = L"A";
 			// 
@@ -560,9 +577,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->BP->BackColor = System::Drawing::Color::LimeGreen;
 			this->BP->Controls->Add(this->BT);
-			this->BP->Location = System::Drawing::Point(40, 361);
+			this->BP->Location = System::Drawing::Point(30, 293);
+			this->BP->Margin = System::Windows::Forms::Padding(2);
 			this->BP->Name = L"BP";
-			this->BP->Size = System::Drawing::Size(153, 54);
+			this->BP->Size = System::Drawing::Size(115, 44);
 			this->BP->TabIndex = 9;
 			// 
 			// BT
@@ -571,9 +589,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->BT->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->BT->ForeColor = System::Drawing::SystemColors::Control;
-			this->BT->Location = System::Drawing::Point(57, 8);
+			this->BT->Location = System::Drawing::Point(43, 6);
+			this->BT->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->BT->Name = L"BT";
-			this->BT->Size = System::Drawing::Size(36, 36);
+			this->BT->Size = System::Drawing::Size(30, 29);
 			this->BT->TabIndex = 1;
 			this->BT->Text = L"B";
 			// 
@@ -581,9 +600,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->B6P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B6P->Controls->Add(this->B6T);
-			this->B6P->Location = System::Drawing::Point(147, 421);
+			this->B6P->Location = System::Drawing::Point(110, 342);
+			this->B6P->Margin = System::Windows::Forms::Padding(2);
 			this->B6P->Name = L"B6P";
-			this->B6P->Size = System::Drawing::Size(46, 43);
+			this->B6P->Size = System::Drawing::Size(34, 35);
 			this->B6P->TabIndex = 4;
 			// 
 			// B6T
@@ -592,9 +612,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->B6T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->B6T->ForeColor = System::Drawing::SystemColors::Control;
-			this->B6T->Location = System::Drawing::Point(4, 6);
+			this->B6T->Location = System::Drawing::Point(3, 5);
+			this->B6T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->B6T->Name = L"B6T";
-			this->B6T->Size = System::Drawing::Size(44, 29);
+			this->B6T->Size = System::Drawing::Size(34, 24);
 			this->B6T->TabIndex = 0;
 			this->B6T->Text = L"B6";
 			// 
@@ -602,9 +623,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->B5P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B5P->Controls->Add(this->B5T);
-			this->B5P->Location = System::Drawing::Point(93, 421);
+			this->B5P->Location = System::Drawing::Point(70, 342);
+			this->B5P->Margin = System::Windows::Forms::Padding(2);
 			this->B5P->Name = L"B5P";
-			this->B5P->Size = System::Drawing::Size(46, 43);
+			this->B5P->Size = System::Drawing::Size(34, 35);
 			this->B5P->TabIndex = 5;
 			// 
 			// B5T
@@ -613,9 +635,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->B5T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->B5T->ForeColor = System::Drawing::SystemColors::Control;
-			this->B5T->Location = System::Drawing::Point(4, 6);
+			this->B5T->Location = System::Drawing::Point(3, 5);
+			this->B5T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->B5T->Name = L"B5T";
-			this->B5T->Size = System::Drawing::Size(44, 29);
+			this->B5T->Size = System::Drawing::Size(34, 24);
 			this->B5T->TabIndex = 0;
 			this->B5T->Text = L"B5";
 			// 
@@ -623,9 +646,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->B4P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B4P->Controls->Add(this->B4T);
-			this->B4P->Location = System::Drawing::Point(41, 421);
+			this->B4P->Location = System::Drawing::Point(31, 342);
+			this->B4P->Margin = System::Windows::Forms::Padding(2);
 			this->B4P->Name = L"B4P";
-			this->B4P->Size = System::Drawing::Size(46, 43);
+			this->B4P->Size = System::Drawing::Size(34, 35);
 			this->B4P->TabIndex = 6;
 			// 
 			// B4T
@@ -634,9 +658,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->B4T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->B4T->ForeColor = System::Drawing::SystemColors::Control;
-			this->B4T->Location = System::Drawing::Point(4, 6);
+			this->B4T->Location = System::Drawing::Point(3, 5);
+			this->B4T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->B4T->Name = L"B4T";
-			this->B4T->Size = System::Drawing::Size(44, 29);
+			this->B4T->Size = System::Drawing::Size(34, 24);
 			this->B4T->TabIndex = 0;
 			this->B4T->Text = L"B4";
 			// 
@@ -644,9 +669,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->B3P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B3P->Controls->Add(this->B3T);
-			this->B3P->Location = System::Drawing::Point(145, 312);
+			this->B3P->Location = System::Drawing::Point(109, 254);
+			this->B3P->Margin = System::Windows::Forms::Padding(2);
 			this->B3P->Name = L"B3P";
-			this->B3P->Size = System::Drawing::Size(46, 43);
+			this->B3P->Size = System::Drawing::Size(34, 35);
 			this->B3P->TabIndex = 7;
 			// 
 			// B3T
@@ -655,9 +681,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->B3T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->B3T->ForeColor = System::Drawing::SystemColors::Control;
-			this->B3T->Location = System::Drawing::Point(4, 6);
+			this->B3T->Location = System::Drawing::Point(3, 5);
+			this->B3T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->B3T->Name = L"B3T";
-			this->B3T->Size = System::Drawing::Size(44, 29);
+			this->B3T->Size = System::Drawing::Size(34, 24);
 			this->B3T->TabIndex = 0;
 			this->B3T->Text = L"B3";
 			// 
@@ -665,9 +692,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->B2P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B2P->Controls->Add(this->B2T);
-			this->B2P->Location = System::Drawing::Point(93, 312);
+			this->B2P->Location = System::Drawing::Point(70, 254);
+			this->B2P->Margin = System::Windows::Forms::Padding(2);
 			this->B2P->Name = L"B2P";
-			this->B2P->Size = System::Drawing::Size(46, 43);
+			this->B2P->Size = System::Drawing::Size(34, 35);
 			this->B2P->TabIndex = 8;
 			// 
 			// B2T
@@ -676,9 +704,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->B2T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->B2T->ForeColor = System::Drawing::SystemColors::Control;
-			this->B2T->Location = System::Drawing::Point(4, 6);
+			this->B2T->Location = System::Drawing::Point(3, 5);
+			this->B2T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->B2T->Name = L"B2T";
-			this->B2T->Size = System::Drawing::Size(44, 29);
+			this->B2T->Size = System::Drawing::Size(34, 24);
 			this->B2T->TabIndex = 0;
 			this->B2T->Text = L"B2";
 			// 
@@ -686,9 +715,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->B1P->BackColor = System::Drawing::Color::LimeGreen;
 			this->B1P->Controls->Add(this->B1T);
-			this->B1P->Location = System::Drawing::Point(40, 312);
+			this->B1P->Location = System::Drawing::Point(30, 254);
+			this->B1P->Margin = System::Windows::Forms::Padding(2);
 			this->B1P->Name = L"B1P";
-			this->B1P->Size = System::Drawing::Size(46, 43);
+			this->B1P->Size = System::Drawing::Size(34, 35);
 			this->B1P->TabIndex = 3;
 			// 
 			// B1T
@@ -697,9 +727,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->B1T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->B1T->ForeColor = System::Drawing::SystemColors::Control;
-			this->B1T->Location = System::Drawing::Point(4, 6);
+			this->B1T->Location = System::Drawing::Point(3, 5);
+			this->B1T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->B1T->Name = L"B1T";
-			this->B1T->Size = System::Drawing::Size(44, 29);
+			this->B1T->Size = System::Drawing::Size(34, 24);
 			this->B1T->TabIndex = 0;
 			this->B1T->Text = L"B1";
 			// 
@@ -707,9 +738,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->CP->BackColor = System::Drawing::Color::Turquoise;
 			this->CP->Controls->Add(this->CT);
-			this->CP->Location = System::Drawing::Point(39, 578);
+			this->CP->Location = System::Drawing::Point(29, 470);
+			this->CP->Margin = System::Windows::Forms::Padding(2);
 			this->CP->Name = L"CP";
-			this->CP->Size = System::Drawing::Size(153, 54);
+			this->CP->Size = System::Drawing::Size(115, 44);
 			this->CP->TabIndex = 16;
 			// 
 			// CT
@@ -718,9 +750,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->CT->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->CT->ForeColor = System::Drawing::SystemColors::Control;
-			this->CT->Location = System::Drawing::Point(57, 8);
+			this->CT->Location = System::Drawing::Point(43, 6);
+			this->CT->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->CT->Name = L"CT";
-			this->CT->Size = System::Drawing::Size(37, 36);
+			this->CT->Size = System::Drawing::Size(31, 29);
 			this->CT->TabIndex = 1;
 			this->CT->Text = L"C";
 			// 
@@ -728,9 +761,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->C6P->BackColor = System::Drawing::Color::Turquoise;
 			this->C6P->Controls->Add(this->C6T);
-			this->C6P->Location = System::Drawing::Point(146, 638);
+			this->C6P->Location = System::Drawing::Point(110, 518);
+			this->C6P->Margin = System::Windows::Forms::Padding(2);
 			this->C6P->Name = L"C6P";
-			this->C6P->Size = System::Drawing::Size(46, 43);
+			this->C6P->Size = System::Drawing::Size(34, 35);
 			this->C6P->TabIndex = 11;
 			// 
 			// C6T
@@ -739,9 +773,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->C6T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->C6T->ForeColor = System::Drawing::SystemColors::Control;
-			this->C6T->Location = System::Drawing::Point(4, 6);
+			this->C6T->Location = System::Drawing::Point(3, 5);
+			this->C6T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->C6T->Name = L"C6T";
-			this->C6T->Size = System::Drawing::Size(45, 29);
+			this->C6T->Size = System::Drawing::Size(35, 24);
 			this->C6T->TabIndex = 0;
 			this->C6T->Text = L"C6";
 			// 
@@ -749,9 +784,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->C5P->BackColor = System::Drawing::Color::Turquoise;
 			this->C5P->Controls->Add(this->C5T);
-			this->C5P->Location = System::Drawing::Point(92, 638);
+			this->C5P->Location = System::Drawing::Point(69, 518);
+			this->C5P->Margin = System::Windows::Forms::Padding(2);
 			this->C5P->Name = L"C5P";
-			this->C5P->Size = System::Drawing::Size(46, 43);
+			this->C5P->Size = System::Drawing::Size(34, 35);
 			this->C5P->TabIndex = 12;
 			// 
 			// C5T
@@ -760,9 +796,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->C5T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->C5T->ForeColor = System::Drawing::SystemColors::Control;
-			this->C5T->Location = System::Drawing::Point(4, 6);
+			this->C5T->Location = System::Drawing::Point(3, 5);
+			this->C5T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->C5T->Name = L"C5T";
-			this->C5T->Size = System::Drawing::Size(45, 29);
+			this->C5T->Size = System::Drawing::Size(35, 24);
 			this->C5T->TabIndex = 0;
 			this->C5T->Text = L"C5";
 			// 
@@ -770,9 +807,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->C4P->BackColor = System::Drawing::Color::Turquoise;
 			this->C4P->Controls->Add(this->C4T);
-			this->C4P->Location = System::Drawing::Point(40, 638);
+			this->C4P->Location = System::Drawing::Point(30, 518);
+			this->C4P->Margin = System::Windows::Forms::Padding(2);
 			this->C4P->Name = L"C4P";
-			this->C4P->Size = System::Drawing::Size(46, 43);
+			this->C4P->Size = System::Drawing::Size(34, 35);
 			this->C4P->TabIndex = 13;
 			// 
 			// C4T
@@ -781,9 +819,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->C4T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->C4T->ForeColor = System::Drawing::SystemColors::Control;
-			this->C4T->Location = System::Drawing::Point(4, 6);
+			this->C4T->Location = System::Drawing::Point(3, 5);
+			this->C4T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->C4T->Name = L"C4T";
-			this->C4T->Size = System::Drawing::Size(45, 29);
+			this->C4T->Size = System::Drawing::Size(35, 24);
 			this->C4T->TabIndex = 0;
 			this->C4T->Text = L"C4";
 			// 
@@ -791,9 +830,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->C3P->BackColor = System::Drawing::Color::Turquoise;
 			this->C3P->Controls->Add(this->C3T);
-			this->C3P->Location = System::Drawing::Point(144, 529);
+			this->C3P->Location = System::Drawing::Point(108, 430);
+			this->C3P->Margin = System::Windows::Forms::Padding(2);
 			this->C3P->Name = L"C3P";
-			this->C3P->Size = System::Drawing::Size(46, 43);
+			this->C3P->Size = System::Drawing::Size(34, 35);
 			this->C3P->TabIndex = 14;
 			// 
 			// C3T
@@ -802,9 +842,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->C3T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->C3T->ForeColor = System::Drawing::SystemColors::Control;
-			this->C3T->Location = System::Drawing::Point(4, 6);
+			this->C3T->Location = System::Drawing::Point(3, 5);
+			this->C3T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->C3T->Name = L"C3T";
-			this->C3T->Size = System::Drawing::Size(45, 29);
+			this->C3T->Size = System::Drawing::Size(35, 24);
 			this->C3T->TabIndex = 0;
 			this->C3T->Text = L"C3";
 			// 
@@ -812,9 +853,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->C2P->BackColor = System::Drawing::Color::Turquoise;
 			this->C2P->Controls->Add(this->C2T);
-			this->C2P->Location = System::Drawing::Point(92, 529);
+			this->C2P->Location = System::Drawing::Point(69, 430);
+			this->C2P->Margin = System::Windows::Forms::Padding(2);
 			this->C2P->Name = L"C2P";
-			this->C2P->Size = System::Drawing::Size(46, 43);
+			this->C2P->Size = System::Drawing::Size(34, 35);
 			this->C2P->TabIndex = 15;
 			// 
 			// C2T
@@ -823,9 +865,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->C2T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->C2T->ForeColor = System::Drawing::SystemColors::Control;
-			this->C2T->Location = System::Drawing::Point(4, 6);
+			this->C2T->Location = System::Drawing::Point(3, 5);
+			this->C2T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->C2T->Name = L"C2T";
-			this->C2T->Size = System::Drawing::Size(45, 29);
+			this->C2T->Size = System::Drawing::Size(35, 24);
 			this->C2T->TabIndex = 0;
 			this->C2T->Text = L"C2";
 			// 
@@ -833,9 +876,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->C1P->BackColor = System::Drawing::Color::Turquoise;
 			this->C1P->Controls->Add(this->C1T);
-			this->C1P->Location = System::Drawing::Point(39, 529);
+			this->C1P->Location = System::Drawing::Point(29, 430);
+			this->C1P->Margin = System::Windows::Forms::Padding(2);
 			this->C1P->Name = L"C1P";
-			this->C1P->Size = System::Drawing::Size(46, 43);
+			this->C1P->Size = System::Drawing::Size(34, 35);
 			this->C1P->TabIndex = 10;
 			// 
 			// C1T
@@ -844,9 +888,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->C1T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->C1T->ForeColor = System::Drawing::SystemColors::Control;
-			this->C1T->Location = System::Drawing::Point(4, 6);
+			this->C1T->Location = System::Drawing::Point(3, 5);
+			this->C1T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->C1T->Name = L"C1T";
-			this->C1T->Size = System::Drawing::Size(45, 29);
+			this->C1T->Size = System::Drawing::Size(35, 24);
 			this->C1T->TabIndex = 0;
 			this->C1T->Text = L"C1";
 			// 
@@ -854,9 +899,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->DP->BackColor = System::Drawing::Color::Blue;
 			this->DP->Controls->Add(this->DT);
-			this->DP->Location = System::Drawing::Point(232, 148);
+			this->DP->Location = System::Drawing::Point(174, 120);
+			this->DP->Margin = System::Windows::Forms::Padding(2);
 			this->DP->Name = L"DP";
-			this->DP->Size = System::Drawing::Size(153, 54);
+			this->DP->Size = System::Drawing::Size(115, 44);
 			this->DP->TabIndex = 16;
 			// 
 			// DT
@@ -865,9 +911,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->DT->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->DT->ForeColor = System::Drawing::SystemColors::Control;
-			this->DT->Location = System::Drawing::Point(57, 8);
+			this->DT->Location = System::Drawing::Point(43, 6);
+			this->DT->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->DT->Name = L"DT";
-			this->DT->Size = System::Drawing::Size(37, 36);
+			this->DT->Size = System::Drawing::Size(31, 29);
 			this->DT->TabIndex = 1;
 			this->DT->Text = L"D";
 			// 
@@ -875,9 +922,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->D6P->BackColor = System::Drawing::Color::Blue;
 			this->D6P->Controls->Add(this->D6T);
-			this->D6P->Location = System::Drawing::Point(339, 208);
+			this->D6P->Location = System::Drawing::Point(254, 169);
+			this->D6P->Margin = System::Windows::Forms::Padding(2);
 			this->D6P->Name = L"D6P";
-			this->D6P->Size = System::Drawing::Size(46, 43);
+			this->D6P->Size = System::Drawing::Size(34, 35);
 			this->D6P->TabIndex = 11;
 			// 
 			// D6T
@@ -886,9 +934,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->D6T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->D6T->ForeColor = System::Drawing::SystemColors::Control;
-			this->D6T->Location = System::Drawing::Point(4, 6);
+			this->D6T->Location = System::Drawing::Point(3, 5);
+			this->D6T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->D6T->Name = L"D6T";
-			this->D6T->Size = System::Drawing::Size(45, 29);
+			this->D6T->Size = System::Drawing::Size(35, 24);
 			this->D6T->TabIndex = 0;
 			this->D6T->Text = L"D6";
 			// 
@@ -896,9 +945,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->D5P->BackColor = System::Drawing::Color::Blue;
 			this->D5P->Controls->Add(this->D5T);
-			this->D5P->Location = System::Drawing::Point(285, 208);
+			this->D5P->Location = System::Drawing::Point(214, 169);
+			this->D5P->Margin = System::Windows::Forms::Padding(2);
 			this->D5P->Name = L"D5P";
-			this->D5P->Size = System::Drawing::Size(46, 43);
+			this->D5P->Size = System::Drawing::Size(34, 35);
 			this->D5P->TabIndex = 12;
 			// 
 			// D5T
@@ -907,9 +957,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->D5T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->D5T->ForeColor = System::Drawing::SystemColors::Control;
-			this->D5T->Location = System::Drawing::Point(4, 6);
+			this->D5T->Location = System::Drawing::Point(3, 5);
+			this->D5T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->D5T->Name = L"D5T";
-			this->D5T->Size = System::Drawing::Size(45, 29);
+			this->D5T->Size = System::Drawing::Size(35, 24);
 			this->D5T->TabIndex = 0;
 			this->D5T->Text = L"D5";
 			// 
@@ -917,9 +968,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->D4P->BackColor = System::Drawing::Color::Blue;
 			this->D4P->Controls->Add(this->D4T);
-			this->D4P->Location = System::Drawing::Point(233, 208);
+			this->D4P->Location = System::Drawing::Point(175, 169);
+			this->D4P->Margin = System::Windows::Forms::Padding(2);
 			this->D4P->Name = L"D4P";
-			this->D4P->Size = System::Drawing::Size(46, 43);
+			this->D4P->Size = System::Drawing::Size(34, 35);
 			this->D4P->TabIndex = 13;
 			// 
 			// D4T
@@ -928,9 +980,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->D4T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->D4T->ForeColor = System::Drawing::SystemColors::Control;
-			this->D4T->Location = System::Drawing::Point(4, 6);
+			this->D4T->Location = System::Drawing::Point(3, 5);
+			this->D4T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->D4T->Name = L"D4T";
-			this->D4T->Size = System::Drawing::Size(45, 29);
+			this->D4T->Size = System::Drawing::Size(35, 24);
 			this->D4T->TabIndex = 0;
 			this->D4T->Text = L"D4";
 			// 
@@ -938,9 +991,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->D3P->BackColor = System::Drawing::Color::Blue;
 			this->D3P->Controls->Add(this->D3T);
-			this->D3P->Location = System::Drawing::Point(337, 99);
+			this->D3P->Location = System::Drawing::Point(253, 80);
+			this->D3P->Margin = System::Windows::Forms::Padding(2);
 			this->D3P->Name = L"D3P";
-			this->D3P->Size = System::Drawing::Size(46, 43);
+			this->D3P->Size = System::Drawing::Size(34, 35);
 			this->D3P->TabIndex = 14;
 			// 
 			// D3T
@@ -949,9 +1003,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->D3T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->D3T->ForeColor = System::Drawing::SystemColors::Control;
-			this->D3T->Location = System::Drawing::Point(4, 6);
+			this->D3T->Location = System::Drawing::Point(3, 5);
+			this->D3T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->D3T->Name = L"D3T";
-			this->D3T->Size = System::Drawing::Size(45, 29);
+			this->D3T->Size = System::Drawing::Size(35, 24);
 			this->D3T->TabIndex = 0;
 			this->D3T->Text = L"D3";
 			// 
@@ -959,9 +1014,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->D2P->BackColor = System::Drawing::Color::Blue;
 			this->D2P->Controls->Add(this->D2T);
-			this->D2P->Location = System::Drawing::Point(285, 99);
+			this->D2P->Location = System::Drawing::Point(214, 80);
+			this->D2P->Margin = System::Windows::Forms::Padding(2);
 			this->D2P->Name = L"D2P";
-			this->D2P->Size = System::Drawing::Size(46, 43);
+			this->D2P->Size = System::Drawing::Size(34, 35);
 			this->D2P->TabIndex = 15;
 			// 
 			// D2T
@@ -970,9 +1026,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->D2T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->D2T->ForeColor = System::Drawing::SystemColors::Control;
-			this->D2T->Location = System::Drawing::Point(4, 6);
+			this->D2T->Location = System::Drawing::Point(3, 5);
+			this->D2T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->D2T->Name = L"D2T";
-			this->D2T->Size = System::Drawing::Size(45, 29);
+			this->D2T->Size = System::Drawing::Size(35, 24);
 			this->D2T->TabIndex = 0;
 			this->D2T->Text = L"D2";
 			// 
@@ -980,9 +1037,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->D1P->BackColor = System::Drawing::Color::Blue;
 			this->D1P->Controls->Add(this->D1T);
-			this->D1P->Location = System::Drawing::Point(232, 99);
+			this->D1P->Location = System::Drawing::Point(174, 80);
+			this->D1P->Margin = System::Windows::Forms::Padding(2);
 			this->D1P->Name = L"D1P";
-			this->D1P->Size = System::Drawing::Size(46, 43);
+			this->D1P->Size = System::Drawing::Size(34, 35);
 			this->D1P->TabIndex = 10;
 			// 
 			// D1T
@@ -991,9 +1049,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->D1T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->D1T->ForeColor = System::Drawing::SystemColors::Control;
-			this->D1T->Location = System::Drawing::Point(4, 6);
+			this->D1T->Location = System::Drawing::Point(3, 5);
+			this->D1T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->D1T->Name = L"D1T";
-			this->D1T->Size = System::Drawing::Size(45, 29);
+			this->D1T->Size = System::Drawing::Size(35, 24);
 			this->D1T->TabIndex = 0;
 			this->D1T->Text = L"D1";
 			// 
@@ -1001,9 +1060,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->EP->BackColor = System::Drawing::Color::BlueViolet;
 			this->EP->Controls->Add(this->ET);
-			this->EP->Location = System::Drawing::Point(232, 361);
+			this->EP->Location = System::Drawing::Point(174, 293);
+			this->EP->Margin = System::Windows::Forms::Padding(2);
 			this->EP->Name = L"EP";
-			this->EP->Size = System::Drawing::Size(153, 54);
+			this->EP->Size = System::Drawing::Size(115, 44);
 			this->EP->TabIndex = 16;
 			// 
 			// ET
@@ -1012,9 +1072,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->ET->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->ET->ForeColor = System::Drawing::SystemColors::Control;
-			this->ET->Location = System::Drawing::Point(57, 8);
+			this->ET->Location = System::Drawing::Point(43, 6);
+			this->ET->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ET->Name = L"ET";
-			this->ET->Size = System::Drawing::Size(36, 36);
+			this->ET->Size = System::Drawing::Size(30, 29);
 			this->ET->TabIndex = 1;
 			this->ET->Text = L"E";
 			// 
@@ -1022,9 +1083,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->E6P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E6P->Controls->Add(this->E6T);
-			this->E6P->Location = System::Drawing::Point(339, 421);
+			this->E6P->Location = System::Drawing::Point(254, 342);
+			this->E6P->Margin = System::Windows::Forms::Padding(2);
 			this->E6P->Name = L"E6P";
-			this->E6P->Size = System::Drawing::Size(46, 43);
+			this->E6P->Size = System::Drawing::Size(34, 35);
 			this->E6P->TabIndex = 11;
 			// 
 			// E6T
@@ -1033,9 +1095,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->E6T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->E6T->ForeColor = System::Drawing::SystemColors::Control;
-			this->E6T->Location = System::Drawing::Point(4, 6);
+			this->E6T->Location = System::Drawing::Point(3, 5);
+			this->E6T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->E6T->Name = L"E6T";
-			this->E6T->Size = System::Drawing::Size(44, 29);
+			this->E6T->Size = System::Drawing::Size(35, 24);
 			this->E6T->TabIndex = 0;
 			this->E6T->Text = L"E6";
 			// 
@@ -1043,9 +1106,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->E5P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E5P->Controls->Add(this->E5T);
-			this->E5P->Location = System::Drawing::Point(285, 421);
+			this->E5P->Location = System::Drawing::Point(214, 342);
+			this->E5P->Margin = System::Windows::Forms::Padding(2);
 			this->E5P->Name = L"E5P";
-			this->E5P->Size = System::Drawing::Size(46, 43);
+			this->E5P->Size = System::Drawing::Size(34, 35);
 			this->E5P->TabIndex = 12;
 			// 
 			// E5T
@@ -1054,9 +1118,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->E5T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->E5T->ForeColor = System::Drawing::SystemColors::Control;
-			this->E5T->Location = System::Drawing::Point(4, 6);
+			this->E5T->Location = System::Drawing::Point(3, 5);
+			this->E5T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->E5T->Name = L"E5T";
-			this->E5T->Size = System::Drawing::Size(44, 29);
+			this->E5T->Size = System::Drawing::Size(35, 24);
 			this->E5T->TabIndex = 0;
 			this->E5T->Text = L"E5";
 			// 
@@ -1064,9 +1129,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->E4P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E4P->Controls->Add(this->E4T);
-			this->E4P->Location = System::Drawing::Point(233, 421);
+			this->E4P->Location = System::Drawing::Point(175, 342);
+			this->E4P->Margin = System::Windows::Forms::Padding(2);
 			this->E4P->Name = L"E4P";
-			this->E4P->Size = System::Drawing::Size(46, 43);
+			this->E4P->Size = System::Drawing::Size(34, 35);
 			this->E4P->TabIndex = 13;
 			// 
 			// E4T
@@ -1075,9 +1141,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->E4T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->E4T->ForeColor = System::Drawing::SystemColors::Control;
-			this->E4T->Location = System::Drawing::Point(4, 6);
+			this->E4T->Location = System::Drawing::Point(3, 5);
+			this->E4T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->E4T->Name = L"E4T";
-			this->E4T->Size = System::Drawing::Size(44, 29);
+			this->E4T->Size = System::Drawing::Size(35, 24);
 			this->E4T->TabIndex = 0;
 			this->E4T->Text = L"E4";
 			// 
@@ -1085,9 +1152,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->E3P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E3P->Controls->Add(this->E3T);
-			this->E3P->Location = System::Drawing::Point(337, 312);
+			this->E3P->Location = System::Drawing::Point(253, 254);
+			this->E3P->Margin = System::Windows::Forms::Padding(2);
 			this->E3P->Name = L"E3P";
-			this->E3P->Size = System::Drawing::Size(46, 43);
+			this->E3P->Size = System::Drawing::Size(34, 35);
 			this->E3P->TabIndex = 14;
 			// 
 			// E3T
@@ -1096,9 +1164,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->E3T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->E3T->ForeColor = System::Drawing::SystemColors::Control;
-			this->E3T->Location = System::Drawing::Point(4, 6);
+			this->E3T->Location = System::Drawing::Point(3, 5);
+			this->E3T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->E3T->Name = L"E3T";
-			this->E3T->Size = System::Drawing::Size(44, 29);
+			this->E3T->Size = System::Drawing::Size(35, 24);
 			this->E3T->TabIndex = 0;
 			this->E3T->Text = L"E3";
 			// 
@@ -1106,9 +1175,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->E2P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E2P->Controls->Add(this->E2T);
-			this->E2P->Location = System::Drawing::Point(285, 312);
+			this->E2P->Location = System::Drawing::Point(214, 254);
+			this->E2P->Margin = System::Windows::Forms::Padding(2);
 			this->E2P->Name = L"E2P";
-			this->E2P->Size = System::Drawing::Size(46, 43);
+			this->E2P->Size = System::Drawing::Size(34, 35);
 			this->E2P->TabIndex = 15;
 			// 
 			// E2T
@@ -1117,9 +1187,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->E2T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->E2T->ForeColor = System::Drawing::SystemColors::Control;
-			this->E2T->Location = System::Drawing::Point(4, 6);
+			this->E2T->Location = System::Drawing::Point(3, 5);
+			this->E2T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->E2T->Name = L"E2T";
-			this->E2T->Size = System::Drawing::Size(44, 29);
+			this->E2T->Size = System::Drawing::Size(35, 24);
 			this->E2T->TabIndex = 0;
 			this->E2T->Text = L"E2";
 			// 
@@ -1127,9 +1198,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->E1P->BackColor = System::Drawing::Color::BlueViolet;
 			this->E1P->Controls->Add(this->E1T);
-			this->E1P->Location = System::Drawing::Point(232, 312);
+			this->E1P->Location = System::Drawing::Point(174, 254);
+			this->E1P->Margin = System::Windows::Forms::Padding(2);
 			this->E1P->Name = L"E1P";
-			this->E1P->Size = System::Drawing::Size(46, 43);
+			this->E1P->Size = System::Drawing::Size(34, 35);
 			this->E1P->TabIndex = 10;
 			// 
 			// E1T
@@ -1138,9 +1210,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->E1T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->E1T->ForeColor = System::Drawing::SystemColors::Control;
-			this->E1T->Location = System::Drawing::Point(4, 6);
+			this->E1T->Location = System::Drawing::Point(3, 5);
+			this->E1T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->E1T->Name = L"E1T";
-			this->E1T->Size = System::Drawing::Size(44, 29);
+			this->E1T->Size = System::Drawing::Size(35, 24);
 			this->E1T->TabIndex = 0;
 			this->E1T->Text = L"E1";
 			// 
@@ -1148,9 +1221,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->FP->BackColor = System::Drawing::Color::HotPink;
 			this->FP->Controls->Add(this->FT);
-			this->FP->Location = System::Drawing::Point(232, 584);
+			this->FP->Location = System::Drawing::Point(174, 474);
+			this->FP->Margin = System::Windows::Forms::Padding(2);
 			this->FP->Name = L"FP";
-			this->FP->Size = System::Drawing::Size(153, 54);
+			this->FP->Size = System::Drawing::Size(115, 44);
 			this->FP->TabIndex = 16;
 			// 
 			// FT
@@ -1159,9 +1233,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->FT->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->FT->ForeColor = System::Drawing::SystemColors::Control;
-			this->FT->Location = System::Drawing::Point(57, 8);
+			this->FT->Location = System::Drawing::Point(43, 6);
+			this->FT->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->FT->Name = L"FT";
-			this->FT->Size = System::Drawing::Size(34, 36);
+			this->FT->Size = System::Drawing::Size(29, 29);
 			this->FT->TabIndex = 1;
 			this->FT->Text = L"F";
 			// 
@@ -1169,9 +1244,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->F6P->BackColor = System::Drawing::Color::HotPink;
 			this->F6P->Controls->Add(this->F6T);
-			this->F6P->Location = System::Drawing::Point(339, 644);
+			this->F6P->Location = System::Drawing::Point(254, 523);
+			this->F6P->Margin = System::Windows::Forms::Padding(2);
 			this->F6P->Name = L"F6P";
-			this->F6P->Size = System::Drawing::Size(46, 43);
+			this->F6P->Size = System::Drawing::Size(34, 35);
 			this->F6P->TabIndex = 11;
 			// 
 			// F6T
@@ -1180,9 +1256,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->F6T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->F6T->ForeColor = System::Drawing::SystemColors::Control;
-			this->F6T->Location = System::Drawing::Point(4, 6);
+			this->F6T->Location = System::Drawing::Point(3, 5);
+			this->F6T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->F6T->Name = L"F6T";
-			this->F6T->Size = System::Drawing::Size(43, 29);
+			this->F6T->Size = System::Drawing::Size(34, 24);
 			this->F6T->TabIndex = 0;
 			this->F6T->Text = L"F6";
 			// 
@@ -1190,9 +1267,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->F5P->BackColor = System::Drawing::Color::HotPink;
 			this->F5P->Controls->Add(this->F5T);
-			this->F5P->Location = System::Drawing::Point(285, 644);
+			this->F5P->Location = System::Drawing::Point(214, 523);
+			this->F5P->Margin = System::Windows::Forms::Padding(2);
 			this->F5P->Name = L"F5P";
-			this->F5P->Size = System::Drawing::Size(46, 43);
+			this->F5P->Size = System::Drawing::Size(34, 35);
 			this->F5P->TabIndex = 12;
 			// 
 			// F5T
@@ -1201,9 +1279,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->F5T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->F5T->ForeColor = System::Drawing::SystemColors::Control;
-			this->F5T->Location = System::Drawing::Point(4, 6);
+			this->F5T->Location = System::Drawing::Point(3, 5);
+			this->F5T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->F5T->Name = L"F5T";
-			this->F5T->Size = System::Drawing::Size(43, 29);
+			this->F5T->Size = System::Drawing::Size(34, 24);
 			this->F5T->TabIndex = 0;
 			this->F5T->Text = L"F5";
 			// 
@@ -1211,9 +1290,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->F4P->BackColor = System::Drawing::Color::HotPink;
 			this->F4P->Controls->Add(this->F4T);
-			this->F4P->Location = System::Drawing::Point(233, 644);
+			this->F4P->Location = System::Drawing::Point(175, 523);
+			this->F4P->Margin = System::Windows::Forms::Padding(2);
 			this->F4P->Name = L"F4P";
-			this->F4P->Size = System::Drawing::Size(46, 43);
+			this->F4P->Size = System::Drawing::Size(34, 35);
 			this->F4P->TabIndex = 13;
 			// 
 			// F4T
@@ -1222,9 +1302,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->F4T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->F4T->ForeColor = System::Drawing::SystemColors::Control;
-			this->F4T->Location = System::Drawing::Point(4, 6);
+			this->F4T->Location = System::Drawing::Point(3, 5);
+			this->F4T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->F4T->Name = L"F4T";
-			this->F4T->Size = System::Drawing::Size(43, 29);
+			this->F4T->Size = System::Drawing::Size(34, 24);
 			this->F4T->TabIndex = 0;
 			this->F4T->Text = L"F4";
 			// 
@@ -1232,9 +1313,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->F3P->BackColor = System::Drawing::Color::HotPink;
 			this->F3P->Controls->Add(this->F3T);
-			this->F3P->Location = System::Drawing::Point(337, 535);
+			this->F3P->Location = System::Drawing::Point(253, 435);
+			this->F3P->Margin = System::Windows::Forms::Padding(2);
 			this->F3P->Name = L"F3P";
-			this->F3P->Size = System::Drawing::Size(46, 43);
+			this->F3P->Size = System::Drawing::Size(34, 35);
 			this->F3P->TabIndex = 14;
 			// 
 			// F3T
@@ -1243,9 +1325,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->F3T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->F3T->ForeColor = System::Drawing::SystemColors::Control;
-			this->F3T->Location = System::Drawing::Point(4, 6);
+			this->F3T->Location = System::Drawing::Point(0, 5);
+			this->F3T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->F3T->Name = L"F3T";
-			this->F3T->Size = System::Drawing::Size(43, 29);
+			this->F3T->Size = System::Drawing::Size(34, 24);
 			this->F3T->TabIndex = 0;
 			this->F3T->Text = L"F3";
 			// 
@@ -1253,9 +1336,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->F2P->BackColor = System::Drawing::Color::HotPink;
 			this->F2P->Controls->Add(this->F2T);
-			this->F2P->Location = System::Drawing::Point(285, 535);
+			this->F2P->Location = System::Drawing::Point(214, 435);
+			this->F2P->Margin = System::Windows::Forms::Padding(2);
 			this->F2P->Name = L"F2P";
-			this->F2P->Size = System::Drawing::Size(46, 43);
+			this->F2P->Size = System::Drawing::Size(34, 35);
 			this->F2P->TabIndex = 15;
 			// 
 			// F2T
@@ -1264,9 +1348,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->F2T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->F2T->ForeColor = System::Drawing::SystemColors::Control;
-			this->F2T->Location = System::Drawing::Point(4, 6);
+			this->F2T->Location = System::Drawing::Point(1, 5);
+			this->F2T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->F2T->Name = L"F2T";
-			this->F2T->Size = System::Drawing::Size(43, 29);
+			this->F2T->Size = System::Drawing::Size(34, 24);
 			this->F2T->TabIndex = 0;
 			this->F2T->Text = L"F2";
 			// 
@@ -1274,9 +1359,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->F1P->BackColor = System::Drawing::Color::HotPink;
 			this->F1P->Controls->Add(this->F1T);
-			this->F1P->Location = System::Drawing::Point(232, 535);
+			this->F1P->Location = System::Drawing::Point(174, 435);
+			this->F1P->Margin = System::Windows::Forms::Padding(2);
 			this->F1P->Name = L"F1P";
-			this->F1P->Size = System::Drawing::Size(46, 43);
+			this->F1P->Size = System::Drawing::Size(34, 35);
 			this->F1P->TabIndex = 10;
 			// 
 			// F1T
@@ -1285,9 +1371,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->F1T->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
 			this->F1T->ForeColor = System::Drawing::SystemColors::Control;
-			this->F1T->Location = System::Drawing::Point(4, 6);
+			this->F1T->Location = System::Drawing::Point(0, 6);
+			this->F1T->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->F1T->Name = L"F1T";
-			this->F1T->Size = System::Drawing::Size(43, 29);
+			this->F1T->Size = System::Drawing::Size(34, 24);
 			this->F1T->TabIndex = 0;
 			this->F1T->Text = L"F1";
 			// 
@@ -1295,20 +1382,25 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// 
 			this->back->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->back->Location = System::Drawing::Point(714, 35);
+			this->back->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"back.Image")));
+			this->back->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->back->Location = System::Drawing::Point(521, 28);
+			this->back->Margin = System::Windows::Forms::Padding(2);
 			this->back->Name = L"back";
-			this->back->Size = System::Drawing::Size(83, 35);
+			this->back->Size = System::Drawing::Size(77, 28);
 			this->back->TabIndex = 17;
 			this->back->Text = L"Back";
+			this->back->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->back->UseVisualStyleBackColor = true;
 			this->back->Click += gcnew System::EventHandler(this, &Table::back_Click);
 			// 
 			// Chair1
 			// 
 			this->Chair1->AutoSize = true;
-			this->Chair1->Location = System::Drawing::Point(589, 214);
+			this->Chair1->Location = System::Drawing::Point(442, 174);
+			this->Chair1->Margin = System::Windows::Forms::Padding(2);
 			this->Chair1->Name = L"Chair1";
-			this->Chair1->Size = System::Drawing::Size(38, 21);
+			this->Chair1->Size = System::Drawing::Size(32, 17);
 			this->Chair1->TabIndex = 18;
 			this->Chair1->Text = L"1";
 			this->Chair1->UseVisualStyleBackColor = true;
@@ -1316,9 +1408,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// Chair2
 			// 
 			this->Chair2->AutoSize = true;
-			this->Chair2->Location = System::Drawing::Point(589, 261);
+			this->Chair2->Location = System::Drawing::Point(442, 212);
+			this->Chair2->Margin = System::Windows::Forms::Padding(2);
 			this->Chair2->Name = L"Chair2";
-			this->Chair2->Size = System::Drawing::Size(38, 21);
+			this->Chair2->Size = System::Drawing::Size(32, 17);
 			this->Chair2->TabIndex = 19;
 			this->Chair2->Text = L"2";
 			this->Chair2->UseVisualStyleBackColor = true;
@@ -1326,9 +1419,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// Chair4
 			// 
 			this->Chair4->AutoSize = true;
-			this->Chair4->Location = System::Drawing::Point(589, 359);
+			this->Chair4->Location = System::Drawing::Point(442, 292);
+			this->Chair4->Margin = System::Windows::Forms::Padding(2);
 			this->Chair4->Name = L"Chair4";
-			this->Chair4->Size = System::Drawing::Size(38, 21);
+			this->Chair4->Size = System::Drawing::Size(32, 17);
 			this->Chair4->TabIndex = 21;
 			this->Chair4->Text = L"4";
 			this->Chair4->UseVisualStyleBackColor = true;
@@ -1336,9 +1430,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// Chair3
 			// 
 			this->Chair3->AutoSize = true;
-			this->Chair3->Location = System::Drawing::Point(589, 312);
+			this->Chair3->Location = System::Drawing::Point(442, 254);
+			this->Chair3->Margin = System::Windows::Forms::Padding(2);
 			this->Chair3->Name = L"Chair3";
-			this->Chair3->Size = System::Drawing::Size(38, 21);
+			this->Chair3->Size = System::Drawing::Size(32, 17);
 			this->Chair3->TabIndex = 20;
 			this->Chair3->Text = L"3";
 			this->Chair3->UseVisualStyleBackColor = true;
@@ -1346,9 +1441,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// Chair6
 			// 
 			this->Chair6->AutoSize = true;
-			this->Chair6->Location = System::Drawing::Point(589, 458);
+			this->Chair6->Location = System::Drawing::Point(442, 372);
+			this->Chair6->Margin = System::Windows::Forms::Padding(2);
 			this->Chair6->Name = L"Chair6";
-			this->Chair6->Size = System::Drawing::Size(38, 21);
+			this->Chair6->Size = System::Drawing::Size(32, 17);
 			this->Chair6->TabIndex = 23;
 			this->Chair6->Text = L"6";
 			this->Chair6->UseVisualStyleBackColor = true;
@@ -1356,9 +1452,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// Chair5
 			// 
 			this->Chair5->AutoSize = true;
-			this->Chair5->Location = System::Drawing::Point(589, 411);
+			this->Chair5->Location = System::Drawing::Point(442, 334);
+			this->Chair5->Margin = System::Windows::Forms::Padding(2);
 			this->Chair5->Name = L"Chair5";
-			this->Chair5->Size = System::Drawing::Size(38, 21);
+			this->Chair5->Size = System::Drawing::Size(32, 17);
 			this->Chair5->TabIndex = 22;
 			this->Chair5->Text = L"5";
 			this->Chair5->UseVisualStyleBackColor = true;
@@ -1366,9 +1463,10 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			// AllChair
 			// 
 			this->AllChair->AutoSize = true;
-			this->AllChair->Location = System::Drawing::Point(589, 509);
+			this->AllChair->Location = System::Drawing::Point(442, 414);
+			this->AllChair->Margin = System::Windows::Forms::Padding(2);
 			this->AllChair->Name = L"AllChair";
-			this->AllChair->Size = System::Drawing::Size(45, 21);
+			this->AllChair->Size = System::Drawing::Size(37, 17);
 			this->AllChair->TabIndex = 24;
 			this->AllChair->Text = L"All";
 			this->AllChair->UseVisualStyleBackColor = true;
@@ -1378,77 +1476,102 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->Table_list->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->Table_list->FormattingEnabled = true;
 			this->Table_list->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"A", L"B", L"C", L"D", L"E", L"F" });
-			this->Table_list->Location = System::Drawing::Point(502, 214);
+			this->Table_list->Location = System::Drawing::Point(376, 174);
+			this->Table_list->Margin = System::Windows::Forms::Padding(2);
 			this->Table_list->Name = L"Table_list";
-			this->Table_list->Size = System::Drawing::Size(52, 24);
+			this->Table_list->Size = System::Drawing::Size(40, 21);
 			this->Table_list->TabIndex = 25;
 			this->Table_list->SelectedIndexChanged += gcnew System::EventHandler(this, &Table::comboBox1_SelectedIndexChanged);
 			// 
 			// ID1
 			// 
-			this->ID1->Location = System::Drawing::Point(651, 216);
+			this->ID1->Location = System::Drawing::Point(488, 176);
+			this->ID1->Margin = System::Windows::Forms::Padding(2);
 			this->ID1->MaxLength = 9;
 			this->ID1->Name = L"ID1";
-			this->ID1->Size = System::Drawing::Size(108, 22);
+			this->ID1->Size = System::Drawing::Size(82, 20);
 			this->ID1->TabIndex = 26;
 			// 
 			// ID2
 			// 
-			this->ID2->Location = System::Drawing::Point(651, 262);
+			this->ID2->Location = System::Drawing::Point(488, 213);
+			this->ID2->Margin = System::Windows::Forms::Padding(2);
 			this->ID2->MaxLength = 9;
 			this->ID2->Name = L"ID2";
-			this->ID2->Size = System::Drawing::Size(108, 22);
+			this->ID2->Size = System::Drawing::Size(82, 20);
 			this->ID2->TabIndex = 27;
 			// 
 			// ID4
 			// 
-			this->ID4->Location = System::Drawing::Point(651, 364);
+			this->ID4->Location = System::Drawing::Point(488, 296);
+			this->ID4->Margin = System::Windows::Forms::Padding(2);
 			this->ID4->MaxLength = 9;
 			this->ID4->Name = L"ID4";
-			this->ID4->Size = System::Drawing::Size(108, 22);
+			this->ID4->Size = System::Drawing::Size(82, 20);
 			this->ID4->TabIndex = 29;
 			// 
 			// ID3
 			// 
-			this->ID3->Location = System::Drawing::Point(651, 318);
+			this->ID3->Location = System::Drawing::Point(488, 258);
+			this->ID3->Margin = System::Windows::Forms::Padding(2);
 			this->ID3->MaxLength = 9;
 			this->ID3->Name = L"ID3";
-			this->ID3->Size = System::Drawing::Size(108, 22);
+			this->ID3->Size = System::Drawing::Size(82, 20);
 			this->ID3->TabIndex = 28;
 			// 
 			// ID6
 			// 
-			this->ID6->Location = System::Drawing::Point(651, 457);
+			this->ID6->Location = System::Drawing::Point(488, 371);
+			this->ID6->Margin = System::Windows::Forms::Padding(2);
 			this->ID6->MaxLength = 9;
 			this->ID6->Name = L"ID6";
-			this->ID6->Size = System::Drawing::Size(108, 22);
+			this->ID6->Size = System::Drawing::Size(82, 20);
 			this->ID6->TabIndex = 31;
 			// 
 			// ID5
 			// 
-			this->ID5->Location = System::Drawing::Point(651, 411);
+			this->ID5->Location = System::Drawing::Point(488, 334);
+			this->ID5->Margin = System::Windows::Forms::Padding(2);
 			this->ID5->MaxLength = 9;
 			this->ID5->Name = L"ID5";
-			this->ID5->Size = System::Drawing::Size(108, 22);
+			this->ID5->Size = System::Drawing::Size(82, 20);
 			this->ID5->TabIndex = 30;
 			// 
 			// Confirm_Book
 			// 
-			this->Confirm_Book->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Confirm_Book->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(222)));
-			this->Confirm_Book->Location = System::Drawing::Point(608, 587);
+			this->Confirm_Book->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Confirm_Book.Image")));
+			this->Confirm_Book->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->Confirm_Book->Location = System::Drawing::Point(442, 477);
+			this->Confirm_Book->Margin = System::Windows::Forms::Padding(2);
 			this->Confirm_Book->Name = L"Confirm_Book";
-			this->Confirm_Book->Size = System::Drawing::Size(151, 47);
+			this->Confirm_Book->Size = System::Drawing::Size(127, 38);
 			this->Confirm_Book->TabIndex = 32;
 			this->Confirm_Book->Text = L"Confirm";
+			this->Confirm_Book->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->Confirm_Book->UseVisualStyleBackColor = true;
 			this->Confirm_Book->Click += gcnew System::EventHandler(this, &Table::Confirm_Book_Click);
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label1->Location = System::Drawing::Point(470, 148);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(128, 16);
+			this->label1->TabIndex = 33;
+			this->label1->Text = L"(Input student ID.)";
+			// 
 			// Table
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(820, 754);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(617, 625);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->Confirm_Book);
 			this->Controls->Add(this->ID6);
 			this->Controls->Add(this->ID5);
@@ -1508,7 +1631,11 @@ private: System::Windows::Forms::Button^  Confirm_Book;
 			this->Controls->Add(this->A2P);
 			this->Controls->Add(this->A1P);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Margin = System::Windows::Forms::Padding(2);
+			this->MaximumSize = System::Drawing::Size(617, 625);
+			this->MinimumSize = System::Drawing::Size(617, 625);
 			this->Name = L"Table";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Table";
 			this->Load += gcnew System::EventHandler(this, &Table::Table_Load);
 			this->A1P->ResumeLayout(false);
